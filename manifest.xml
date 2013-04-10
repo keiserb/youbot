@@ -1,0 +1,14 @@
+<package>
+  <description brief="myproject">
+
+     myproject
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/myproject</url>
+
+</package>
+
+
