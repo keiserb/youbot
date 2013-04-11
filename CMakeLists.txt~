@@ -33,3 +33,4 @@ rosbuild_add_executable(myproject
     src/myproj.cpp ~/youbot/rpg_youbot/ros_packages/rpg_youbot_common/src/rpg_youbot_common.cpp
 )
 
+rosbuild_include(myproject Curses)

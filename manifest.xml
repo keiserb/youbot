@@ -6,8 +6,15 @@
   </description>
   <author>keiserb</author>
   <license>BSD</license>
-  <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/myproject</url>
+  <depend package="roscpp" />
+  <depend package="std_msgs" />
+  <depend package="geometry_msgs" />
+  <depend package="brics_actuator" />
+  <depend package="rpg_youbot_common" />
+
+  <export>
+    <cpp cflags="-I${prefix}/msg/cpp"/>
+  </export>
 
 </package>
 
