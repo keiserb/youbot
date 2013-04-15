@@ -1,0 +1,22 @@
+<package>
+  <description brief="myproject">
+
+     myproject
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <depend package="roscpp" />
+  <depend package="std_msgs" />
+  <depend package="geometry_msgs" />
+  <depend package="sensor_msgs" />
+  <depend package="brics_actuator" />
+  <depend package="rpg_youbot_common" />
+
+  <export>
+    <cpp cflags="-I${prefix}/msg/cpp"/>
+  </export>
+
+</package>
+
+
