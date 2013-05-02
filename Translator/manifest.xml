@@ -1,0 +1,16 @@
+<package>
+  <description brief="Translator">
+    This program is thought as an interface between the Orocos driver and the ROS driver so the interfaces are compatible.
+  </description>
+  <author>Benjamin Keiser, keiserb@student.ethz.ch</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="nav_msgs"/>
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs" />
+  <depend package="brics_actuator" />
+  <depend package="geometry_msgs" />
+  <depend package="youbot_msgs" />
+  <depend package="rpg_youbot_common" />
+
+</package>

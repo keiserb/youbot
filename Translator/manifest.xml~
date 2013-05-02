@@ -1,0 +1,14 @@
+<package>
+  <description brief="communicator">
+    This program is thought as an interface between the Orocos driver and the ROS driver so the interfaces are compatible.
+  </description>
+  <author>Benjamin Keiser, keiserb@student.ethz.ch</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="std_msgs"/>
+  <depend package="youbot_common" />
+  <depend package="sensor_msgs" />
+  <depend package="brics_actuator" />
+  <depend package="geometry_msgs" />
+
+</package>

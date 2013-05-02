@@ -15,7 +15,7 @@ ros::Subscriber joint_state;
 
 void argparser(char key, double * joints)
 {
-	if(key=='w')
+		if(key=='w')
 		{
 			command.linear.x = command.linear.x+0.1;
 		}
@@ -126,8 +126,8 @@ int main(int argc, char* argv[])
 	ros::NodeHandle nh;
 	ros::Rate loop_rate(10);
 	//advertise(): Topic we want to publish under + buffer size
-	velocity_command_pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
-	joint_command_pub = nh.advertise<brics_actuator::JointPositions>("/arm_1/arm_controller/position_command",1);
+	velocity_command_pub = nh.advertise<geometry_msgs::Twist>("twist_in", 1);
+	joint_command_pub = nh.advertise<brics_actuator::JointPositions>("jpos_in",1);
 	
 	//set desired joint positions and generate message
 	double joints[5] = { 0.0, 0.0, 0.0, 0.0, 0.0 }; 
@@ -157,7 +157,7 @@ int main(int argc, char* argv[])
 		ros::spinOnce(); 
 		
  		// wait
-		joint_state = nh.subscribe("/joint_states",1,printmsg); 		
+		joint_state = nh.subscribe("jstate_out",1,printmsg); 		
  		loop_rate.sleep();	
 
 	}

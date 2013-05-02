@@ -30,6 +30,6 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #target_link_libraries(example ${PROJECT_NAME})
 
 rosbuild_add_executable(myproject 
-    src/myproj.cpp  ~/youbot/rpg_youbot/ros_packages/rpg_youbot_common/src/rpg_youbot_common.cpp
+    src/myproj.cpp  ~/rosstacks/rpg_youbot/ros_packages/rpg_youbot_common/src/rpg_youbot_common.cpp
 )
 

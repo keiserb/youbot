@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/keiserb/myproject/Translator/src/Translator.cpp
+Translater.hpp
+/home/keiserb/myproject/Translator/src/Translater.hpp
+

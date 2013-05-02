@@ -10,11 +10,12 @@ geometry_msgs::Twist command;			//define message which controls base
 brics_actuator::JointPositions jointpos;
 ros::Publisher velocity_command_pub;	//define publisher	
 ros::Publisher joint_command_pub;
+ros::Subscriber joint_state;
  	
 
 void argparser(char key, double * joints)
 {
-	if(key=='w')
+		if(key=='w')
 		{
 			command.linear.x = command.linear.x+0.1;
 		}
@@ -105,6 +106,19 @@ void argparser(char key, double * joints)
 
 }
 
+void printmsg(const sensor_msgs::JointState::ConstPtr& msg)
+{
+	cout << "message: " << endl;
+	for(int i=0; i<5; i++)
+	{
+		cout << "name: " << msg->name[i] << endl;
+		cout << "position: " << msg->position[i] << endl;
+		cout << "velocity: " << msg->velocity[i] << endl;
+		//cout << "effort: " << msg->effort[i] << endl;
+	} 
+
+}
+
 int main(int argc, char* argv[])
 {
 	char key = 'a';
@@ -112,8 +126,8 @@ int main(int argc, char* argv[])
 	ros::NodeHandle nh;
 	ros::Rate loop_rate(10);
 	//advertise(): Topic we want to publish under + buffer size
-	velocity_command_pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
-	joint_command_pub = nh.advertise<brics_actuator::JointPositions>("/arm_1/arm_controller/position_command",1);
+	velocity_command_pub = nh.advertise<geometry_msgs::Twist>("cmd_twist", 1);
+	joint_command_pub = nh.advertise<brics_actuator::JointPositions>("jpos_in",1);
 	
 	//set desired joint positions and generate message
 	double joints[5] = { 0.0, 0.0, 0.0, 0.0, 0.0 }; 
@@ -143,7 +157,7 @@ int main(int argc, char* argv[])
 		ros::spinOnce(); 
 		
  		// wait
- 		
+		joint_state = nh.subscribe("jstate_out",1,printmsg); 		
  		loop_rate.sleep();	
 
 	}
@@ -151,3 +165,4 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
+

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O2 -g     -pthread CMakeFiles/Translater.dir/src/Translater.o  -o ../bin/Translater -rdynamic -L/opt/ros/fuerte/lib -lroslib -Wl,-rpath,/opt/ros/fuerte/lib 

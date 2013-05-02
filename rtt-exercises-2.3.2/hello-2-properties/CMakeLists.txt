@@ -33,7 +33,8 @@ endif()
 # Exercise: add the dependency on rtt-marshalling in the find_package macro below
 # See: http://www.orocos.org/wiki/orocos/toolchain/getting-started/cmake-and-building
 # for syntax.
-find_package(Orocos-RTT REQUIRED ${RTT_HINTS})
+find_package(Orocos-RTT REQUIRED rtt-marshalling ${RTT_HINTS})
+
 
 # Defines the orocos_* cmake macros. See that file for additional
 # documentation.
@@ -42,6 +43,7 @@ include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 # Creates an orocos executable HelloWorld
 orocos_use_package(ocl-taskbrowser)
 orocos_executable(HelloWorld HelloWorld.cpp) # ...you may add multiple source files
+target_link_libraries(HelloWorld ${OROCOS-RTT_RTT-MARSHALLING_LIBRARY} )
 
 # Exercise:
 # See : http://www.orocos.org/wiki/orocos/toolchain/getting-started/cmake-and-building

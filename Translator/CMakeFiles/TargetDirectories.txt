@@ -1,0 +1,17 @@
+/home/keiserb/myproject/Translator/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/keiserb/myproject/Translator/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/keiserb/myproject/Translator/CMakeFiles/ROSBUILD_gensrv_cpp.dir
+/home/keiserb/myproject/Translator/CMakeFiles/ROSBUILD_gensrv_lisp.dir
+/home/keiserb/myproject/Translator/CMakeFiles/Translator.dir
+/home/keiserb/myproject/Translator/CMakeFiles/clean-test-results.dir
+/home/keiserb/myproject/Translator/CMakeFiles/rosbuild_precompile.dir
+/home/keiserb/myproject/Translator/CMakeFiles/rosbuild_premsgsrvgen.dir
+/home/keiserb/myproject/Translator/CMakeFiles/rospack_genmsg.dir
+/home/keiserb/myproject/Translator/CMakeFiles/rospack_genmsg_libexe.dir
+/home/keiserb/myproject/Translator/CMakeFiles/rospack_gensrv.dir
+/home/keiserb/myproject/Translator/CMakeFiles/rpg_youbot_common.dir
+/home/keiserb/myproject/Translator/CMakeFiles/test.dir
+/home/keiserb/myproject/Translator/CMakeFiles/test-future.dir
+/home/keiserb/myproject/Translator/CMakeFiles/test-results.dir
+/home/keiserb/myproject/Translator/CMakeFiles/test-results-run.dir
+/home/keiserb/myproject/Translator/CMakeFiles/tests.dir

@@ -20,6 +20,8 @@
 #include <ocl/OCL.hpp>
 #include <ocl/TaskBrowser.hpp>
 
+ #include <rtt/marsh/Marshalling.hpp> 
+
 using namespace std;
 using namespace RTT;
 using namespace Orocos;
@@ -78,6 +80,7 @@ namespace Example
          * and are suitable for XML.
          */
         std::string property;
+        std::string property1;
         /**
          * Attributes are C++ variables exported to the interface.
          */
@@ -94,16 +97,30 @@ namespace Example
          * of the component.
          */
         Hello(std::string name)
-            : TaskContext(name),
+            : TaskContext(name, PreOperational),
               // Name, description, value
               property("Hello World")
         {
             // Now add it to the interface:
             this->addProperty("the_property", property).doc("This property can contain any friendly string.");
+            this->addProperty("test_property", property1).doc("This property is used to test marshalling.");
+
 
             this->addAttribute("the_attribute", attribute);
             this->addConstant("the_constant", constant);
+
+            this->getProvider<Marshalling>("marshalling");
         }
+            bool configureHook()
+            {
+                this->getProvider<Marshalling>("marshalling")->readProperties("test.xml");
+                return true;
+            }
+            void cleanupHook()
+            {
+                this->getProvider<Marshalling>("marshalling")->writeProperties("test.xml");
+            }
+        
     };
 }
 

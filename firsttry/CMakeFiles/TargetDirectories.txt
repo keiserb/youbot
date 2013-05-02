@@ -1,0 +1,16 @@
+/home/keiserb/myproject/firsttry/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/ROSBUILD_gensrv_cpp.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/ROSBUILD_gensrv_lisp.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/clean-test-results.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/myproject.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/rosbuild_precompile.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/rosbuild_premsgsrvgen.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/rospack_genmsg.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/rospack_genmsg_libexe.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/rospack_gensrv.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/test.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/test-future.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/test-results.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/test-results-run.dir
+/home/keiserb/myproject/firsttry/CMakeFiles/tests.dir

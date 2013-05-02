@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="the_property" type="string"><description>This property can contain any friendly string.</description><value>cleanupworks</value></simple>
+  <simple name="test_property" type="string"><description>This property is used to test marshalling.</description><value>yoinkster</value></simple>
+</properties>

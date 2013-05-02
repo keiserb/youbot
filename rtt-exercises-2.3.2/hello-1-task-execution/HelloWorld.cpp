@@ -70,9 +70,26 @@ namespace Example
         {
         	log(Info) << "Update !" <<endlog();
         }
+        bool startHook()
+        {
+            log(Info) << "Start !" <<endlog();
+            return true;
+        }
+        
+        void stopHook()
+        {
+            log(Info) << "Stop !" <<endlog();
+        }
+        void cleanupHook()
+        {
+            log(Info) << "Cleanup !" <<endlog();
+        }
         bool configureHook()
         {
-        	return true;
+            log(Info) << "Configure !" <<endlog();
+            if(this->setPeriod(0.5))
+                start();
+            return this->setPeriod(0.5);
         }
     };
 }

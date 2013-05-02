@@ -1,0 +1,18 @@
+<package>
+  <description brief="communicator">
+    The communicator is thought as an interface between ROS and Orocos. It is built to relay messages from ROS to Orocos and vice versa. 
+  </description>
+  <author>Benjamin Keiser, keiserb@student.ethz.ch</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="rtt"/>
+  <depend package="rtt_rosnode"/>
+  <depend package="rtt_std_msgs"/>
+  <depend package="rpg_youbot_common" />
+  <depend package="rtt_sensor_msgs" />
+  <depend package="rtt_geometry_msgs" />
+  <depend package="rtt_youbot_msgs" />
+  <depend package="rtt_nav_msgs" />
+  <depend package="rtt_brics_actuator" />
+  <depend package="rtt_motion_control_msgs" />
+</package>

@@ -115,6 +115,19 @@ namespace Example
 
         void updateHook()
         {
+          if(inputport.read(read_helper))
+          {
+            log(Info) << read_helper << endlog();
+            outputport.write(read_helper);
+          }
+        }
+
+        bool configureHook()
+        {
+          if(inputport.connected())
+            return true;
+          else
+            return false;
         }
     };
 
@@ -142,6 +155,7 @@ namespace Example
 		value( 0.0 )
 		{
             this->ports()->addPort( my_port ).doc("World's data producing port.");
+            this->setPeriod(0.1);
 		}
 
 		void updateHook() {
@@ -194,7 +208,8 @@ int ORO_main(int argc, char** argv)
     log(Info) << "**** Creating the 'Data Flow' connection ****" <<endlog();
 
     // This uses the default connection policy.
-    world.ports()->getPort("world_port")->connectTo( hello.ports()->getPort("the_input_port") );
+    ConnPolicy policy = RTT::ConnPolicy::buffer(10,1);
+    world.ports()->getPort("world_port")->connectTo( hello.ports()->getPort("the_input_port"), policy );
 
     log(Info) << "**** Starting the TaskBrowser       ****" <<endlog();
     // Switch to user-interactive mode.

@@ -1,0 +1,191 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.6.0' compiled with GCC 4.6.3. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 1366115628910148727 ticks ( 1.36612e+09 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading plugin libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./plugins ...
+0.002 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.002 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.002 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.002 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./types ...
+0.013 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.013 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
+0.030 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.030 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.030 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.032 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.032 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.032 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
+0.032 [ Info   ][main()] ./HelloWorld-gnulinux manually raises LogLevel to 'Info' (5). See also file 'orocos.log'.
+0.032 [ Info   ][main()] **** Creating the 'Hello' component ****
+0.032 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Hello'
+0.033 [ Info   ][Hello] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 9285 ).
+0.033 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.033 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 9286 ).
+0.033 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=1, CPU affinity=0, with name='Activity'
+0.033 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.033 [ Warning][Activity] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.033 [ Info   ][Activity] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0.5 (PID= 9287 ).
+0.034 [ Info   ][main()] **** Starting the 'hello' component ****
+0.034 [ Info   ][main()] **** Creating the 'World' component ****
+0.034 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='World'
+0.034 [ Info   ][World] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 9288 ).
+0.034 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_RT, priority=1, CPU affinity=0, with name='Activity'
+0.034 [ Warning][Thread] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.034 [ Warning][Activity] Lowering scheduler type to SCHED_OTHER for non-privileged users..
+0.034 [ Info   ][Activity] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0.5 (PID= 9289 ).
+0.034 [ Info   ][main()] **** Creating the 'Peer' connection ****
+0.035 [ Info   ][main()] **** Starting the TaskBrowser       ****
+0.035 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.035 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 9290 ).
+0.035 [ Info   ][main()] Entering Task Hello
+3.890 [ Info   ][main()] Found complete interface of requested service 'robot'
+8.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+8.035 [ Info   ][main()]   Saying: Hello Orocos!
+8.035 [ Info   ][main()] Answer: Hello Friend!
+8.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+8.535 [ Info   ][main()]   Saying: Hello Orocos!
+8.535 [ Info   ][main()] Answer: Hello Friend!
+9.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+9.035 [ Info   ][main()]   Saying: Hello Orocos!
+9.035 [ Info   ][main()] Answer: Hello Friend!
+9.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+9.535 [ Info   ][main()]   Saying: Hello Orocos!
+9.535 [ Info   ][main()] Answer: Hello Friend!
+10.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+10.035 [ Info   ][main()]   Saying: Hello Orocos!
+10.035 [ Info   ][main()] Answer: Hello Friend!
+10.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+10.535 [ Info   ][main()]   Saying: Hello Orocos!
+10.535 [ Info   ][main()] Answer: Hello Friend!
+11.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+11.035 [ Info   ][main()]   Saying: Hello Orocos!
+11.035 [ Info   ][main()] Answer: Hello Friend!
+11.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+11.535 [ Info   ][main()]   Saying: Hello Orocos!
+11.535 [ Info   ][main()] Answer: Hello Friend!
+12.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+12.035 [ Info   ][main()]   Saying: Hello Orocos!
+12.035 [ Info   ][main()] Answer: Hello Friend!
+12.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+12.535 [ Info   ][main()]   Saying: Hello Orocos!
+12.535 [ Info   ][main()] Answer: Hello Friend!
+13.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+13.035 [ Info   ][main()]   Saying: Hello Orocos!
+13.035 [ Info   ][main()] Answer: Hello Friend!
+13.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+13.535 [ Info   ][main()]   Saying: Hello Orocos!
+13.535 [ Info   ][main()] Answer: Hello Friend!
+14.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+14.035 [ Info   ][main()]   Saying: Hello Orocos!
+14.035 [ Info   ][main()] Answer: Hello Friend!
+14.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+14.535 [ Info   ][main()]   Saying: Hello Orocos!
+14.535 [ Info   ][main()] Answer: Hello Friend!
+15.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+15.035 [ Info   ][main()]   Saying: Hello Orocos!
+15.035 [ Info   ][main()] Answer: Hello Friend!
+15.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+15.535 [ Info   ][main()]   Saying: Hello Orocos!
+15.535 [ Info   ][main()] Answer: Hello Friend!
+16.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+16.035 [ Info   ][main()]   Saying: Hello Orocos!
+16.035 [ Info   ][main()] Answer: Hello Friend!
+16.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+16.535 [ Info   ][main()]   Saying: Hello Orocos!
+16.535 [ Info   ][main()] Answer: Hello Friend!
+17.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+17.035 [ Info   ][main()]   Saying: Hello Orocos!
+17.035 [ Info   ][main()] Answer: Hello Friend!
+17.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+17.535 [ Info   ][main()]   Saying: Hello Orocos!
+17.535 [ Info   ][main()] Answer: Hello Friend!
+18.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+18.035 [ Info   ][main()]   Saying: Hello Orocos!
+18.035 [ Info   ][main()] Answer: Hello Friend!
+18.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+18.535 [ Info   ][main()]   Saying: Hello Orocos!
+18.535 [ Info   ][main()] Answer: Hello Friend!
+19.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+19.035 [ Info   ][main()]   Saying: Hello Orocos!
+19.035 [ Info   ][main()] Answer: Hello Friend!
+19.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+19.535 [ Info   ][main()]   Saying: Hello Orocos!
+19.535 [ Info   ][main()] Answer: Hello Friend!
+20.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+20.035 [ Info   ][main()]   Saying: Hello Orocos!
+20.035 [ Info   ][main()] Answer: Hello Friend!
+20.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+20.535 [ Info   ][main()]   Saying: Hello Orocos!
+20.535 [ Info   ][main()] Answer: Hello Friend!
+21.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+21.035 [ Info   ][main()]   Saying: Hello Orocos!
+21.035 [ Info   ][main()] Answer: Hello Friend!
+21.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+21.535 [ Info   ][main()]   Saying: Hello Orocos!
+21.535 [ Info   ][main()] Answer: Hello Friend!
+22.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+22.035 [ Info   ][main()]   Saying: Hello Orocos!
+22.035 [ Info   ][main()] Answer: Hello Friend!
+22.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+22.535 [ Info   ][main()]   Saying: Hello Orocos!
+22.535 [ Info   ][main()] Answer: Hello Friend!
+23.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+23.035 [ Info   ][main()]   Saying: Hello Orocos!
+23.035 [ Info   ][main()] Answer: Hello Friend!
+23.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+23.535 [ Info   ][main()]   Saying: Hello Orocos!
+23.535 [ Info   ][main()] Answer: Hello Friend!
+24.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+24.035 [ Info   ][main()]   Saying: Hello Orocos!
+24.035 [ Info   ][main()] Answer: Hello Friend!
+24.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+24.535 [ Info   ][main()]   Saying: Hello Orocos!
+24.535 [ Info   ][main()] Answer: Hello Friend!
+25.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+25.035 [ Info   ][main()]   Saying: Hello Orocos!
+25.035 [ Info   ][main()] Answer: Hello Friend!
+25.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+25.535 [ Info   ][main()]   Saying: Hello Orocos!
+25.535 [ Info   ][main()] Answer: Hello Friend!
+26.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+26.035 [ Info   ][main()]   Saying: Hello Orocos!
+26.035 [ Info   ][main()] Answer: Hello Friend!
+26.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+26.535 [ Info   ][main()]   Saying: Hello Orocos!
+26.535 [ Info   ][main()] Answer: Hello Friend!
+27.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+27.035 [ Info   ][main()]   Saying: Hello Orocos!
+27.035 [ Info   ][main()] Answer: Hello Friend!
+27.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+27.535 [ Info   ][main()]   Saying: Hello Orocos!
+27.535 [ Info   ][main()] Answer: Hello Friend!
+28.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+28.035 [ Info   ][main()]   Saying: Hello Orocos!
+28.035 [ Info   ][main()] Answer: Hello Friend!
+28.535 [ Info   ][main()] Receiving from 'Hello': Hello World
+28.535 [ Info   ][main()]   Saying: Hello Orocos!
+28.535 [ Info   ][main()] Answer: Hello Friend!
+29.035 [ Info   ][main()] Receiving from 'Hello': Hello World
+29.035 [ Info   ][main()]   Saying: Hello Orocos!
+29.035 [ Info   ][main()] Answer: Hello Friend!
+30.034 [ Info   ][Logger] Orocos Logging Deactivated.

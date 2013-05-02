@@ -1,48 +1,91 @@
 0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
 0.000 [ Info   ][Logger]  OROCOS version '2.6.0' compiled with GCC 4.6.3. Running in GNU/Linux.
 0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
-0.000 [ Info   ][Logger] Reference System Time is : 1366032825319134062 ticks ( 1.36603e+09 seconds ).
+0.000 [ Info   ][Logger] Reference System Time is : 1366036786682029790 ticks ( 1.36604e+09 seconds ).
 0.000 [ Info   ][Logger] Logging is relative to this time.
 0.000 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
 0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
 0.000 [ Info   ][Logger] Loading plugin libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./plugins ...
-0.013 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
-0.013 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
-0.013 [ Info   ][Logger] typekit 'rtt' not loaded before.
-0.013 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./types ...
-0.078 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
-0.078 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
-0.110 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
-0.110 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
-0.121 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
-0.121 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
-0.121 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
-0.121 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
-0.121 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
-0.150 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
-0.150 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
-0.150 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
-0.150 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
-0.150 [ Info   ][main()] ./HelloWorld-gnulinux manually raises LogLevel to 'Info' (5). See also file 'orocos.log'.
-0.150 [ Info   ][main()] **** Creating the 'Hello' component ****
-0.150 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Hello'
-0.150 [ Info   ][Hello] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 17386 ).
-0.150 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
-0.151 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 17387 ).
-0.151 [ Info   ][main()] **** Starting the TaskBrowser       ****
-0.151 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
-0.151 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 17388 ).
-0.151 [ Info   ][main()] Entering Task Hello
-47.291 [ Info   ][Logger] Orocos Logging Deactivated.
+0.002 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.002 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.002 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.002 [ Info   ][Logger] Loading typekit libraries from directory /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos/gnulinux/./types ...
+0.027 [ Info   ][TypekitRepository::Import] Loading Transport CORBA://rtt-types.
+0.027 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-corba-types' from 'rtt-transport-corba'
+0.056 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for int
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for uint
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for double
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for float
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for char
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for bool
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for void
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for ConnPolicy
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for TaskContext
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for string
+0.056 [ Info   ][TypekitRepository::Import] Registered new 'CORBA' transport for array
+0.056 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.058 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.058 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.058 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.058 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/orocos
+0.058 [ Info   ][main()] ./HelloWorld-gnulinux manually raises LogLevel to 'Info' (5). See also file 'orocos.log'.
+0.059 [ Info   ][main()] **** Creating the 'Hello' component ****
+0.059 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Hello'
+0.059 [ Info   ][Hello] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 19093 ).
+0.059 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.059 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 19094 ).
+0.059 [ Info   ][main()] **** Starting the TaskBrowser       ****
+0.059 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.060 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 19095 ).
+0.060 [ Info   ][main()] Entering Task Hello
+4.128 [ Info   ][main()] Configure !
+4.128 [ Info   ][main()] Start !
+6.544 [ Info   ][main()] Start !
+6.628 [ Info   ][main()] Update !
+7.128 [ Info   ][main()] Update !
+7.628 [ Info   ][main()] Update !
+8.128 [ Info   ][main()] Update !
+8.628 [ Info   ][main()] Update !
+9.128 [ Info   ][main()] Update !
+9.628 [ Info   ][main()] Update !
+10.128 [ Info   ][main()] Update !
+10.628 [ Info   ][main()] Update !
+11.128 [ Info   ][main()] Stop !
+14.395 [ Info   ][main()] Start !
+14.628 [ Info   ][main()] Update !
+15.128 [ Info   ][main()] Update !
+15.628 [ Info   ][main()] Update !
+16.128 [ Info   ][main()] Update !
+16.628 [ Info   ][main()] Update !
+17.128 [ Info   ][main()] Update !
+17.628 [ Info   ][main()] Update !
+18.128 [ Info   ][main()] Update !
+18.628 [ Info   ][main()] Update !
+19.128 [ Info   ][main()] Update !
+19.628 [ Info   ][main()] Stop !
+25.552 [ Info   ][main()] Start !
+25.629 [ Info   ][main()] Update !
+26.129 [ Info   ][main()] Update !
+26.629 [ Info   ][main()] Update !
+27.129 [ Info   ][main()] Update !
+27.629 [ Info   ][main()] Update !
+28.129 [ Info   ][main()] Update !
+28.629 [ Info   ][main()] Update !
+29.129 [ Info   ][main()] Update !
+29.629 [ Info   ][main()] Update !
+30.129 [ Info   ][main()] Update !
+30.629 [ Info   ][main()] Stop !
+58.193 [ Info   ][main()] Start !
+58.629 [ Info   ][main()] Update !
+59.129 [ Info   ][main()] Update !
+59.629 [ Info   ][main()] Update !
+60.129 [ Info   ][main()] Update !
+60.629 [ Info   ][main()] Stop !
+70.630 [ Info   ][Logger] Orocos Logging Deactivated.

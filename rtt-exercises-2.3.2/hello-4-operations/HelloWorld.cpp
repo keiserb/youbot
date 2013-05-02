@@ -1,4 +1,3 @@
-
 /**
  * @file HelloWorld.cpp
  * This file demonstrates the Orocos 'Operation/OperationCaller' primitive with
@@ -62,9 +61,21 @@ namespace Example
         string mymethod() {
             return "Hello World";
         }
+
+        bool sayIt(string sentence, string& answer) {
+            log(Info) << "Saying: Hello " << sentence << endlog();
+            if(sentence=="Orocos")
+            {
+                answer="Hello Friend!";
+                return true;
+            }
+            else
+                return false;
+        }
         /** @} */
 
     public:
+        
         /**
          * This example sets the interface up in the Constructor
          * of the component.
@@ -73,6 +84,7 @@ namespace Example
             : TaskContext(name)
         {
             this->addOperation("the_method", &Hello::mymethod, this).doc("Returns a friendly word.");
+            this->addOperation("sayIt", &Hello::sayIt, this).doc("Greets a friend.");
         }
 
     };
@@ -92,15 +104,15 @@ namespace Example
     	 * a member variable of your class.
     	 */
     	OperationCaller< string(void) > hello_method;
-
+        OperationCaller< bool(string,string&) > sayIt;
     	/** @} */
-
+        string yoink;
     public:
     	World(std::string name)
 			: TaskContext(name, PreOperational)
     	{
     	}
-
+        
     	bool configureHook() {
 
     		// Lookup the Hello component.
@@ -112,16 +124,27 @@ namespace Example
 
     	    // It is best practice to lookup methods of peers in
     	    // your configureHook.
-    	    hello_method = peer->getOperation("themethod");
+    	    hello_method = peer->getOperation("the_method");
     	    if ( !hello_method.ready() ) {
     	    	log(Error) << "Could not find Hello.the_method Operation!"<<endlog();
     	    	return false;
     	    }
     	    return true;
+
+            sayIt = peer->getOperation("sayIt");
+            if(!sayIt.ready()){
+                log(Error) << "Could not find Hello.say_it Operation!"<<endlog();
+                return false;
+            }
+            return true;
     	}
 
     	void updateHook() {
     		log(Info) << "Receiving from 'Hello': " << hello_method() <<endlog();
+            sayIt("Orocos", yoink);
+            log(Info) << "Answer: " << yoink << endlog();
+
+                
     	}
     };
 }

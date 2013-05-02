@@ -1,4 +1,3 @@
-
 /**
  * @file HelloWorld.cpp
  * This file demonstrates the Orocos Provides/Requires primitives with
@@ -118,7 +117,7 @@ namespace Example
 
         OperationCaller< bool(string, string&) > sayIt;
     	/** @} */
-
+        string yoink;
     public:
     	World(std::string name)
 			: TaskContext(name, PreOperational),
@@ -136,7 +135,8 @@ namespace Example
 
     	void updateHook() {
     		log(Info) << "Receiving from 'Hello': " << mymethod() <<endlog();
-            // Log the results of sayIt here too.
+            sayIt("Orocos", yoink);
+            log(Info) << "Answer: " << yoink << endlog();
     	}
     };
 }
