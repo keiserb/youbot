@@ -55,7 +55,36 @@ Communicator::Communicator(const std::string& name) :
   this->addPort("arm_vel_com_oro", arm_vel_out).doc("Arm Velocity Command Orocos");
   this->addPort("arm_tor_com_oro", arm_tor_out).doc("Arm Torques Command Orocos");
   this->addPort("arm_gri_pos_oro", gri_pos_out).doc("Gripper Position Command Orocos");
+
+  j_vel_mc.velocities.assign(YOUBOT_NR_OF_JOINTS,0);
+  j_pos_mc.positions.assign(YOUBOT_NR_OF_JOINTS,0);
+  j_eff_mc.efforts.assign(YOUBOT_NR_OF_JOINTS,0);
 }
+
+motion_control_msgs::JointPositions Communicator::br2mc(brics_actuator::JointPositions jpos)
+{
+  for(int j=0; j < YOUBOT_NR_OF_JOINTS; j++){
+      j_pos_mc.positions[j]=jpos.positions[j].value;
+    }
+    return j_pos_mc;
+  }
+
+motion_control_msgs::JointVelocities Communicator::br2mc(brics_actuator::JointVelocities jvel)
+{
+  for(int j=0; j < YOUBOT_NR_OF_JOINTS; j++){
+    j_vel_mc.velocities[j]=jvel.velocities[j].value;
+  }
+  return j_vel_mc;
+ }
+
+motion_control_msgs::JointEfforts Communicator::br2mc(brics_actuator::JointTorques jtor)
+{
+  for(int j=0; j < YOUBOT_NR_OF_JOINTS; j++){
+    j_eff_mc.efforts[j]=jtor.torques[j].value;
+  }
+  return j_eff_mc;
+ }
+
 void Communicator::updateHook()
 {
   if(twist_in.read(twist_msg)==NewData)
@@ -64,10 +93,32 @@ void Communicator::updateHook()
     base_control_mode.write(control_mode);
     twist_out.write(twist_msg);
   }
+  if(arm_pos_in.read(j_pos_br)==NewData)
+    {
+      control_mode.data="Positioning";
+      arm_control_mode.write(control_mode);
+      arm_pos_out.write(br2mc(j_pos_br));
+    }
+  if(arm_vel_in.read(j_vel_br)==NewData)
+    {
+      control_mode.data="Velocity";
+      arm_control_mode.write(control_mode);
+      arm_vel_out.write(br2mc(j_vel_br));
+    }
+  if(arm_tor_in.read(j_tor_br)==NewData)
+    {
+      control_mode.data="Current";
+      arm_control_mode.write(control_mode);
+      arm_tor_out.write(br2mc(j_tor_br));
+    }
+
+
+
 }
 
 bool Communicator::configureHook()
 {
+
   return true;
 }
 

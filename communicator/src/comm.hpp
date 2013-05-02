@@ -17,6 +17,9 @@
 #include <brics_actuator/typekit/Types.h>
 #include <motion_control_msgs/typekit/Types.h>
 
+#define YOUBOT_NR_OF_WHEELS 4
+#define YOUBOT_NR_OF_JOINTS 5
+
 namespace communicator
 {
 
@@ -63,13 +66,20 @@ public:
 private:
   geometry_msgs::Twist twist_msg;
   std_msgs::String control_mode;
+  motion_control_msgs::JointPositions j_pos_mc;
+  motion_control_msgs::JointVelocities j_vel_mc;
+  motion_control_msgs::JointEfforts j_eff_mc;
 
+  brics_actuator::JointPositions j_pos_br;
+  brics_actuator::JointVelocities j_vel_br;
+  brics_actuator::JointTorques j_tor_br;
+
+  motion_control_msgs::JointPositions br2mc(brics_actuator::JointPositions jpos);
+  motion_control_msgs::JointVelocities br2mc(brics_actuator::JointVelocities jvel);
+  motion_control_msgs::JointEfforts br2mc(brics_actuator::JointTorques jtor);
 
   bool configureHook();
-//  bool startHook();
   void updateHook();
-//  void stopHook();
-//  void cleanupHook();
 };
 //class
 }//namespace
