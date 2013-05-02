@@ -103,6 +103,14 @@ std::vector<int> Communicator::ar2vec(std_msgs::Int32MultiArray array)
   }
   return m_base_cur_oro;
 }
+//Convert the gripper command
+int Communicator::gripper(brics_actuator::JointPositions grip)
+{
+  if(grip.positions[0].value < 0.005)
+    return 0;
+  else
+    return 1;
+}
 
 //The update function is repeated as long as the Orocos component is running.
 void Communicator::updateHook()
@@ -145,7 +153,7 @@ void Communicator::updateHook()
   //Handles Gripper Commands
   if (gri_pos_in.read(m_grip_pos) == NewData)
   {
-    gri_pos_out.write(m_grip_pos.positions[0].value);
+    gri_pos_out.write(gripper(m_grip_pos));
   }
   //Handles Joint State Message
   if (j_state_in.read(m_joint_state) == NewData)

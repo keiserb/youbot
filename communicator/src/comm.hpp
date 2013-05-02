@@ -86,6 +86,7 @@ private:
   motion_control_msgs::JointVelocities br2mc(brics_actuator::JointVelocities jvel);
   motion_control_msgs::JointEfforts br2mc(brics_actuator::JointTorques jtor);
   std::vector<int> ar2vec(std_msgs::Int32MultiArray array);
+  int gripper(brics_actuator::JointPositions grip);
 
   bool configureHook();
   void updateHook();
