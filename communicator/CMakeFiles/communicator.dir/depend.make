@@ -3,9 +3,9 @@
 
 CMakeFiles/communicator.dir/src/comm.o: src/comm.cpp
 CMakeFiles/communicator.dir/src/comm.o: src/comm.hpp
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/motion_control/rtt_motion_control_msgs/include/motion_control_msgs/typekit/Types.h
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/rtt_brics_actuator/include/brics_actuator/typekit/Types.h
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/include/youbot_msgs/typekit/Types.h
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/include/motion_control_msgs/typekit/Types.h
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/rtt_brics_actuator/include/brics_actuator/typekit/Types.h
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/include/youbot_msgs/typekit/Types.h
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/include/geometry_msgs/Point.h
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/include/geometry_msgs/Point32.h
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/include/geometry_msgs/PointStamped.h

@@ -58,7 +58,10 @@ Communicator::Communicator(const std::string& name) :
 }
 void Communicator::updateHook()
 {
-  log(Info) << "yoink" << endlog();
+  if(twist_in.read(twist_msg)==NewData)
+  {
+    twist_out.write(twist_msg);
+  }
 }
 
 bool Communicator::configureHook()

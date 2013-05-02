@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/youbot/myproject/youbot/communicator
+CMAKE_SOURCE_DIR = /home/keiserb/myproject/communicator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/youbot/myproject/youbot/communicator
+CMAKE_BINARY_DIR = /home/keiserb/myproject/communicator
 
 # Include any dependencies generated for this target.
 include CMakeFiles/communicator.dir/depend.make
@@ -53,11 +53,11 @@ CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/orocos_toolchain/
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/roslang/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/roscpp/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/roslib/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rospack/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/myproject/rtt_ros_integration/rtt_rospack/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/orocos_toolchain/log4cpp/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/orocos_toolchain/ocl/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/myproject/rtt_ros_integration/rtt_rosnode/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/bullet/manifest.xml
@@ -71,34 +71,34 @@ CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/roswtf/manifest.xm
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/message_filters/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/cob_common/brics_actuator/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/rpg_youbot/ros_packages/rpg_youbot_common/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/rpg_youbot_common/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/rosgraph_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_rosgraph_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/youbot_hardware/youbot_msgs/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/youbot_hardware/youbot_msgs/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/share/nav_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/rtt_brics_actuator/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/motion_control/motion_control_msgs/manifest.xml
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/motion_control/rtt_motion_control_msgs/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/rtt_brics_actuator/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/motion_control/motion_control_msgs/manifest.xml
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/manifest.xml
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
 CMakeFiles/communicator.dir/src/comm.o: /opt/ros/fuerte/stacks/cob_common/brics_actuator/msg_gen/generated
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/youbot_hardware/youbot_msgs/msg_gen/generated
-CMakeFiles/communicator.dir/src/comm.o: /home/youbot/orocos/motion_control/motion_control_msgs/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/youbot/myproject/youbot/communicator/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/youbot_hardware/youbot_msgs/msg_gen/generated
+CMakeFiles/communicator.dir/src/comm.o: /home/keiserb/rosstacks/motion_control/motion_control_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/keiserb/myproject/communicator/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/communicator.dir/src/comm.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -DOROCOS_TARGET=gnulinux -o CMakeFiles/communicator.dir/src/comm.o -c /home/youbot/myproject/youbot/communicator/src/comm.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -DOROCOS_TARGET=gnulinux -o CMakeFiles/communicator.dir/src/comm.o -c /home/keiserb/myproject/communicator/src/comm.cpp
 
 CMakeFiles/communicator.dir/src/comm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/communicator.dir/src/comm.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -DOROCOS_TARGET=gnulinux -E /home/youbot/myproject/youbot/communicator/src/comm.cpp > CMakeFiles/communicator.dir/src/comm.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -DOROCOS_TARGET=gnulinux -E /home/keiserb/myproject/communicator/src/comm.cpp > CMakeFiles/communicator.dir/src/comm.i
 
 CMakeFiles/communicator.dir/src/comm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/communicator.dir/src/comm.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -DOROCOS_TARGET=gnulinux -S /home/youbot/myproject/youbot/communicator/src/comm.cpp -o CMakeFiles/communicator.dir/src/comm.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -DOROCOS_TARGET=gnulinux -S /home/keiserb/myproject/communicator/src/comm.cpp -o CMakeFiles/communicator.dir/src/comm.s
 
 CMakeFiles/communicator.dir/src/comm.o.requires:
 .PHONY : CMakeFiles/communicator.dir/src/comm.o.requires
@@ -117,47 +117,47 @@ communicator_OBJECTS = \
 communicator_EXTERNAL_OBJECTS =
 
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: CMakeFiles/communicator.dir/src/comm.o
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/plugins/librtt_rosnode-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/plugins/librtt_rosparam_service-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/types/librtt-ros-primitives-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/myproject/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/plugins/librtt_rosnode-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/myproject/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/plugins/librtt_rosparam_service-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/myproject/rtt_ros_integration/rtt_rosnode/lib/orocos/gnulinux/types/librtt-ros-primitives-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux/types/librtt-std_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux/types/librtt-std_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux/types/librtt-sensor_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux/types/librtt-sensor_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux/types/librtt-geometry_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux/types/librtt-geometry_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-typekit-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-ros-transport-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux/types/librtt-nav_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux/types/librtt-nav_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-typekit-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-ros-transport-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-typekit-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-ros-transport-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/librt.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/librt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/orocos_toolchain/install/lib/liborocos-rtt-gnulinux.so.2.6.0
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux/types/librtt-std_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_ros_comm/rtt_std_msgs/lib/orocos/gnulinux/types/librtt-std_msgs-ros-transport-gnulinux.so
@@ -165,18 +165,18 @@ lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_comm
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_sensor_msgs/lib/orocos/gnulinux/types/librtt-sensor_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux/types/librtt-geometry_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_geometry_msgs/lib/orocos/gnulinux/types/librtt-geometry_msgs-ros-transport-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-typekit-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-ros-transport-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/lib/orocos/gnulinux/types/librtt-youbot_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux/types/librtt-nav_msgs-typekit-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/stacks/rtt_common_msgs/rtt_nav_msgs/lib/orocos/gnulinux/types/librtt-nav_msgs-ros-transport-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-typekit-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-ros-transport-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-typekit-gnulinux.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/youbot/orocos/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-ros-transport-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/rtt_brics_actuator/lib/orocos/gnulinux/types/librtt-brics_actuator-ros-transport-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-typekit-gnulinux.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/lib/orocos/gnulinux/types/librtt-motion_control_msgs-ros-transport-gnulinux.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/libboost_filesystem-mt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/libboost_system-mt.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/libboost_serialization-mt.so
-lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/i386-linux-gnu/libpthread.so
+lib/orocos/gnulinux/libcommunicator-gnulinux.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: /opt/ros/fuerte/lib/librospack.so
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: CMakeFiles/communicator.dir/build.make
 lib/orocos/gnulinux/libcommunicator-gnulinux.so: CMakeFiles/communicator.dir/link.txt
@@ -195,6 +195,6 @@ CMakeFiles/communicator.dir/clean:
 .PHONY : CMakeFiles/communicator.dir/clean
 
 CMakeFiles/communicator.dir/depend:
-	cd /home/youbot/myproject/youbot/communicator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator/CMakeFiles/communicator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/keiserb/myproject/communicator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator/CMakeFiles/communicator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/communicator.dir/depend
 

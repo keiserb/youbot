@@ -59,6 +59,8 @@ public:
   RTT::OutputPort<int> gri_pos_out;
 
 private:
+  geometry_msgs::Twist twist_msg;
+
 
   bool configureHook();
 //  bool startHook();

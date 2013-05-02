@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/youbot/myproject/youbot/communicator
+CMAKE_SOURCE_DIR = /home/keiserb/myproject/communicator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/youbot/myproject/youbot/communicator
+CMAKE_BINARY_DIR = /home/keiserb/myproject/communicator
 
 # Utility rule file for test.
 
@@ -57,6 +57,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/youbot/myproject/youbot/communicator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator /home/youbot/myproject/youbot/communicator/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/keiserb/myproject/communicator && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator /home/keiserb/myproject/communicator/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

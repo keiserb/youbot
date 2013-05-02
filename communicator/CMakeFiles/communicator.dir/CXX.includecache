@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/youbot/myproject/youbot/communicator/src/comm.cpp
+/home/keiserb/myproject/communicator/src/comm.cpp
 comm.hpp
-/home/youbot/myproject/youbot/communicator/src/comm.hpp
+/home/keiserb/myproject/communicator/src/comm.hpp
 
-/home/youbot/myproject/youbot/communicator/src/comm.hpp
+/home/keiserb/myproject/communicator/src/comm.hpp
 rtt/Service.hpp
 -
 rtt/Port.hpp
@@ -36,17 +36,17 @@ brics_actuator/typekit/Types.h
 motion_control_msgs/typekit/Types.h
 -
 
-/home/youbot/orocos/motion_control/rtt_motion_control_msgs/include/motion_control_msgs/typekit/Types.h
+/home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/include/motion_control_msgs/typekit/Types.h
 Types.hpp
-/home/youbot/orocos/motion_control/rtt_motion_control_msgs/include/motion_control_msgs/typekit/Types.hpp
+/home/keiserb/rosstacks/motion_control/rtt_motion_control_msgs/include/motion_control_msgs/typekit/Types.hpp
 
-/home/youbot/orocos/rtt_brics_actuator/include/brics_actuator/typekit/Types.h
+/home/keiserb/rosstacks/rtt_brics_actuator/include/brics_actuator/typekit/Types.h
 Types.hpp
-/home/youbot/orocos/rtt_brics_actuator/include/brics_actuator/typekit/Types.hpp
+/home/keiserb/rosstacks/rtt_brics_actuator/include/brics_actuator/typekit/Types.hpp
 
-/home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/include/youbot_msgs/typekit/Types.h
+/home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/include/youbot_msgs/typekit/Types.h
 Types.hpp
-/home/youbot/orocos/youbot_hardware/rtt_youbot_msgs/include/youbot_msgs/typekit/Types.hpp
+/home/keiserb/rosstacks/youbot_hardware/rtt_youbot_msgs/include/youbot_msgs/typekit/Types.hpp
 
 /opt/ros/fuerte/include/geometry_msgs/Point.h
 string
