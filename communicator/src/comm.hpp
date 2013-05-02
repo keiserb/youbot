@@ -1,14 +1,14 @@
 #ifndef COMM_HPP_
 #define COMM_HPP_
 
+//needed orocos includes
 #include <rtt/Service.hpp>
 #include <rtt/Port.hpp>
 #include <rtt/os/TimeService.hpp>
 #include <rtt/TaskContext.hpp>
 #include <rtt/Component.hpp>
 
-//#include <rpg_youbot_common.h>
-
+//include message typekits
 #include <geometry_msgs/typekit/Types.h>
 #include <std_msgs/typekit/Types.h>
 #include <sensor_msgs/typekit/Types.h>
@@ -42,15 +42,15 @@ public:
   //define OutputPorts for ROS Side (ROS stream is defined in .odl file)
   RTT::OutputPort<sensor_msgs::JointState> j_state_out;
   RTT::OutputPort<nav_msgs::Odometry> odom_out;
+  RTT::OutputPort<youbot_msgs::motor_states> base_motor_states_ros;
+  RTT::OutputPort<youbot_msgs::motor_states> arm_motor_states_ros;
 
   //define InputPorts for Orocos Side
   RTT::InputPort<nav_msgs::Odometry> odom_in;
   RTT::InputPort<youbot_msgs::motor_states> base_motor_states;
-
   RTT::InputPort<std::string> base_events;
   RTT::InputPort<youbot_msgs::motor_states> arm_motor_states;
   RTT::InputPort<sensor_msgs::JointState> j_state_in;
-
   RTT::InputPort<std::string> arm_events;
 
   //define OutputPorts for Orocos Side
@@ -64,19 +64,28 @@ public:
   RTT::OutputPort<int> gri_pos_out;
 
 private:
+  //define all the messages needed
   geometry_msgs::Twist twist_msg;
   std_msgs::String control_mode;
   motion_control_msgs::JointPositions j_pos_mc;
   motion_control_msgs::JointVelocities j_vel_mc;
   motion_control_msgs::JointEfforts j_eff_mc;
-
   brics_actuator::JointPositions j_pos_br;
   brics_actuator::JointVelocities j_vel_br;
   brics_actuator::JointTorques j_tor_br;
+  brics_actuator::JointPositions m_grip_pos;
+  sensor_msgs::JointState m_joint_state;
+  nav_msgs::Odometry m_odom;
+  youbot_msgs::motor_states base_mot_state;
+  youbot_msgs::motor_states arm_mot_state;
+  std_msgs::Int32MultiArray m_base_cur_ros;
+  std::vector<int> m_base_cur_oro;
 
+  //define helper functions to translate between different messages
   motion_control_msgs::JointPositions br2mc(brics_actuator::JointPositions jpos);
   motion_control_msgs::JointVelocities br2mc(brics_actuator::JointVelocities jvel);
   motion_control_msgs::JointEfforts br2mc(brics_actuator::JointTorques jtor);
+  std::vector<int> ar2vec(std_msgs::Int32MultiArray array);
 
   bool configureHook();
   void updateHook();

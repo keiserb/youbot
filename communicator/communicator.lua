@@ -54,6 +54,8 @@ depl:stream("com.grip_position_command", rtt.provides("ros"):topic("/arm_1/gripp
 
 depl:stream("com.joint_states", rtt.provides("ros"):topic("joint_states"))
 depl:stream("com.odom", rtt.provides("ros"):topic("odom"))
+depl:stream("com.base_motor_states_out", rtt.provides("ros"):topic("base_motor_states"))
+depl:stream("com.arm_motor_states_out", rtt.provides("ros"):topic("arm_motor_states"))
 
 print("Starting Communicator")
 com:start()
