@@ -19,11 +19,11 @@ com=depl:getPeer("com")
 -- connect the youbot ports with the communicator
 depl:connect("youbot.Arm1.motor_states","com.arm_motor_states",rtt.Variable("ConnPolicy"))
 depl:connect("youbot.Arm1.jointstate","com.joint_states_in",rtt.Variable("ConnPolicy"))
--- depl:connect("youbot.Arm1.control_mode_ros","com.arm_control_mode",rtt.Variable("ConnPolicy"))
+depl:connect("youbot.Arm1.control_mode_ros","com.arm_control_mode",rtt.Variable("ConnPolicy"))
 depl:connect("youbot.Arm1.events","com.arm_events",rtt.Variable("ConnPolicy"))
 depl:connect("youbot.Base.odometry","com.odom_in",rtt.Variable("ConnPolicy"))
 depl:connect("youbot.Base.motor_states","com.base_motor_states",rtt.Variable("ConnPolicy"))
--- depl:connect("youbot.Base.control_mode_ros","com.base_control_mode",rtt.Variable("ConnPolicy"))
+depl:connect("youbot.Base.control_mode_ros","com.base_control_mode",rtt.Variable("ConnPolicy"))
 depl:connect("youbot.Base.events","com.base_events",rtt.Variable("ConnPolicy"))
 
 depl:connect("youbot.Base.cmd_twist","com.cmd_vel_out",rtt.Variable("ConnPolicy"))

@@ -42,13 +42,13 @@ Communicator::Communicator(const std::string& name) :
   //add Orocos Ports: EventPorts for Inputs, "normal" Ports for outputs
   this->addEventPort("arm_motor_states", arm_motor_states).doc("Arm Motor States Orocos");
   this->addEventPort("joint_states_in", j_state_in).doc("joint_states message Orocos");
-  this->addEventPort("arm_control_mode", arm_control_mode).doc("Arm Control Mode Orocos");
   this->addEventPort("arm_events", arm_events).doc("Arm Events Orocos");
   this->addEventPort("odom_in", odom_in).doc("Odometry message Orocos");
   this->addEventPort("base_motor_states", base_motor_states).doc("Base Motor States Orocos");
-  this->addEventPort("base_control_mode", base_control_mode).doc("Base Control Mode Orocos");
-  this->addEventPort("base_events", base_events).doc("Base Events OrocosSS");
+  this->addEventPort("base_events", base_events).doc("Base Events Orocos");
 
+  this->addPort("arm_control_mode", arm_control_mode).doc("Arm Control Mode Orocos");
+  this->addPort("base_control_mode", base_control_mode).doc("Base Control Mode Orocos");
   this->addPort("cmd_vel_out", twist_out).doc("Base Twist Command Orocos");
   this->addPort("base_current_command_oro", base_cur_out).doc("Base Current Command Orocos");
   this->addPort("arm_pos_com_oro", arm_pos_out).doc("Arm Position Command Orocos");
@@ -60,6 +60,8 @@ void Communicator::updateHook()
 {
   if(twist_in.read(twist_msg)==NewData)
   {
+    control_mode.data="Velocity";
+    base_control_mode.write(control_mode);
     twist_out.write(twist_msg);
   }
 }

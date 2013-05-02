@@ -43,14 +43,16 @@ public:
   //define InputPorts for Orocos Side
   RTT::InputPort<nav_msgs::Odometry> odom_in;
   RTT::InputPort<youbot_msgs::motor_states> base_motor_states;
-  RTT::InputPort<std::string> base_control_mode;
+
   RTT::InputPort<std::string> base_events;
   RTT::InputPort<youbot_msgs::motor_states> arm_motor_states;
   RTT::InputPort<sensor_msgs::JointState> j_state_in;
-  RTT::InputPort<std::string> arm_control_mode;
+
   RTT::InputPort<std::string> arm_events;
 
   //define OutputPorts for Orocos Side
+  RTT::OutputPort<std_msgs::String> base_control_mode;
+  RTT::OutputPort<std_msgs::String> arm_control_mode;
   RTT::OutputPort<geometry_msgs::Twist> twist_out;
   RTT::OutputPort<std::vector<int> > base_cur_out;
   RTT::OutputPort<motion_control_msgs::JointPositions> arm_pos_out;
@@ -60,6 +62,7 @@ public:
 
 private:
   geometry_msgs::Twist twist_msg;
+  std_msgs::String control_mode;
 
 
   bool configureHook();
