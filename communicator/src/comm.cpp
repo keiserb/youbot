@@ -50,7 +50,7 @@ Communicator::Communicator(const std::string& name) :
   this->addEventPort("base_events", base_events).doc("Base Events OrocosSS");
 
   this->addPort("cmd_vel_out", twist_out).doc("Base Twist Command Orocos");
-  this->addPort("base_current_command", base_cur_out).doc("Base Current Command Orocos");
+  this->addPort("base_current_command_oro", base_cur_out).doc("Base Current Command Orocos");
   this->addPort("arm_pos_com_oro", arm_pos_out).doc("Arm Position Command Orocos");
   this->addPort("arm_vel_com_oro", arm_vel_out).doc("Arm Velocity Command Orocos");
   this->addPort("arm_tor_com_oro", arm_tor_out).doc("Arm Torques Command Orocos");

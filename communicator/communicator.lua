@@ -27,16 +27,17 @@ depl:connect("youbot.Base.motor_states","com.base_motor_states",rtt.Variable("Co
 depl:connect("youbot.Base.events","com.base_events",rtt.Variable("ConnPolicy"))
 
 depl:connect("youbot.Base.cmd_twist","com.cmd_vel_out",rtt.Variable("ConnPolicy"))
--- depl:connect("youbot.Base.cmd_current","com.base_current_command",rtt.Variable("ConnPolicy"))
-depl:connect("youbot.Arm1.joint_velocity_command","com.arm_pos_com_oro",rtt.Variable("ConnPolicy"))
-depl:connect("youbot.Arm1.joint_position_command","com.arm_vel_com_oro",rtt.Variable("ConnPolicy"))
+depl:connect("youbot.Base.cmd_current","com.base_current_command_oro",rtt.Variable("ConnPolicy"))
+depl:connect("youbot.Arm1.joint_velocity_command","com.arm_vel_com_oro",rtt.Variable("ConnPolicy"))
+depl:connect("youbot.Arm1.joint_position_command","com.arm_pos_com_oro",rtt.Variable("ConnPolicy"))
 depl:connect("youbot.Arm1.joint_effort_command","com.arm_tor_com_oro",rtt.Variable("ConnPolicy"))
-depl:connect("youbot.Arm1.gripper_cmd","com.gri_pos_out",rtt.Variable("ConnPolicy"))
+depl:connect("youbot.Arm1.gripper_cmd","com.arm_gri_pos_oro",rtt.Variable("ConnPolicy"))
 
 
-
-depl:loadService("dyn","rosparam")
-dyn:provides("rosparam"):refreshProperty("robot_description",false,false)
+--[[
+depl:loadService("com","rosparam")
+com:provides("rosparam"):refreshProperty("robot_description",false,false)
+]]--
 print("Configuring communicator")
 
 if not com:configure() then
@@ -52,7 +53,7 @@ depl:stream("com.arm_torques_command", rtt.provides("ros"):topic("/arm_1/arm_con
 depl:stream("com.grip_position_command", rtt.provides("ros"):topic("/arm_1/gripper_controller/position_command"))
 
 depl:stream("com.joint_states", rtt.provides("ros"):topic("joint_states"))
-depl:stream("com.odometry", rtt.provides("ros"):topic("odom"))
+depl:stream("com.odom", rtt.provides("ros"):topic("odom"))
 
 --[[
 depl:stream("com.control_mode_ros", rtt.provides("ros"):topic("arm_control_mode"))

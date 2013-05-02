@@ -1,0 +1,16 @@
+/home/youbot/myproject/youbot/communicator/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/ROSBUILD_gensrv_cpp.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/ROSBUILD_gensrv_lisp.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/clean-test-results.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/communicator.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/rosbuild_precompile.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/rosbuild_premsgsrvgen.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/rospack_genmsg.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/rospack_genmsg_libexe.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/rospack_gensrv.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/test.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/test-future.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/test-results.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/test-results-run.dir
+/home/youbot/myproject/youbot/communicator/CMakeFiles/tests.dir
