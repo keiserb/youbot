@@ -1,7 +1,0 @@
-<launch>
-
-<include file="$(find youbot_description)/launch/youbot_description.launch"/>
-
-<node name="YoubotMaster" pkg="ocl" type="rttlua-gnulinux" args="-i $(find communicator)/communicator.lua" output="screen" required="true"/>
-
-</launch>

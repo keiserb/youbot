@@ -1,0 +1,20 @@
+<package>
+  <description brief="grav_comp">
+
+     grav_comp
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/grav_comp</url>
+  <depend package="kdl_parser" />
+  <depend package="tf_conversions" />
+  <depend package="orocos_kdl" />
+  <depend package="youbot_description" />
+  <depend package="geometry_msgs" />
+  <depend package="motion_control_msgs" />
+
+</package>
+
+

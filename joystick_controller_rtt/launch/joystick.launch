@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- start joystick -->
+  <node pkg="joy" type="joy_node" name="joy">
+    <param name="autorepeat_rate" value="4"/>
+  </node>
+
+  <!-- start joystick controller -->
+  <node pkg="joystick_controller" type="joystick_controller" name="joystick_controller"/>
+	
+</launch>
