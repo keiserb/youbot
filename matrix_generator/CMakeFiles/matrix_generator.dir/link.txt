@@ -1,0 +1,1 @@
+/usr/bin/c++   -O2 -g     -pthread CMakeFiles/matrix_generator.dir/src/m_gen.o  -o bin/matrix_generator -rdynamic -lrt 

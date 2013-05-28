@@ -1,0 +1,14 @@
+<package>
+  <description brief="matrix_generator">
+
+     matrix_generator
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/matrix_generator</url>
+
+</package>
+
+

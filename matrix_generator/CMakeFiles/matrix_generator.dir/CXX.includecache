@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/keiserb/myproject/matrix_generator/src/YoubotArmDynamics.hpp
+math.h
+-
+
+/home/keiserb/myproject/matrix_generator/src/m_gen.cpp
+iostream
+-
+YoubotArmDynamics.hpp
+/home/keiserb/myproject/matrix_generator/src/YoubotArmDynamics.hpp
+time.h
+-
+
