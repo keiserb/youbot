@@ -1,20 +1,19 @@
 <package>
-  <description brief="grav_comp">
+  <description brief="torque_control">
 
-     grav_comp
+     torque_control
 
   </description>
   <author>keiserb</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/grav_comp</url>
+  <url>http://ros.org/wiki/torque_control</url>
   <depend package="kdl_parser" />
   <depend package="tf_conversions" />
   <depend package="orocos_kdl" />
   <depend package="youbot_description" />
-  <depend package="geometry_msgs" />
-  <depend package="motion_control_msgs" />
-
+  <depend package="roscpp" />
+  <rosdep name="boost" />
 </package>
 
 

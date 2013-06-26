@@ -1,6 +1,7 @@
 #include <iostream>
-#include "YoubotArmDynamics.hpp"
+#include "YoubotArmDynamicsSymbolic.hpp"
 #include "YoubotArmModel.hpp"
+#include "YoubotJacobi.hpp"
 #include <kdl/jntarray.hpp>
 #include <kdl/frames.hpp>
 #include <time.h>
@@ -28,6 +29,8 @@ int main()
 	KDL::Frame cart_pos;
 	MatrixXd M(5,5);
 	MatrixXd C(5,5);
+	MatrixXd J(6,5);
+	MatrixXd Jinv(5,6);
 	VectorXd N(5);
 	VectorXd T(5);
 	for(int i=0;i<5;i++)
@@ -43,17 +46,17 @@ int main()
 
 	pos.resize(5);
 	vel.resize(5);
-	pos(0) = 0.1;
-	pos(1) = 0.5;
-	pos(2) = 0.44;
-	pos(3) = 0.13;
-	pos(4) = 0.99;
+	pos(0) = 0.6824;
+	pos(1) = 0.5165;
+	pos(2) = 1.0145;
+	pos(3) = 0.4337;
+	pos(4) = 0.1530;
 	vel(0) = -2;
 	vel(1) = 1.22;
 	vel(2) = 0;
 	vel(3) = 0.3;
 	vel(4) = -0.3;
-	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t0);
+	//clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t0);
 	getM(M,pos);
 	getC(C,pos,vel);
 	getN(N,pos);
@@ -70,8 +73,10 @@ int main()
 	getTwists(xi_1,xi_2,xi_3,xi_4,xi_5,tf,pos);
 	forwardKin(xi_1,xi_2,xi_3,xi_4,xi_5,tf, cart_pos);
 	*/
-	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
+	//clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 	getCartPos(pos,cart_pos);
+	getJacobi(J,pos);
+	getInverseJacobi(Jinv,pos);
 
 	cout << "execution time in milliseconds: " << 	diff(t0,t1).tv_nsec/1000000.0 << endl;
 	cout << "Pos: " << endl;
@@ -103,5 +108,42 @@ int main()
 			cout << N(j) << endl;
 		}
 	cout << endl;
+
+	cout << "J: " << endl;
+	for(int i=0;i<6;i++)
+	{
+		for(int j=0;j<5;j++)
+		{
+			cout << J(i,j) << "\t";
+		}
+		cout << endl;
+	}
+
+	cout << "Jinv: " << endl;
+	for(int i=0;i<5;i++)
+	{
+		for(int j=0;j<6;j++)
+		{
+			cout << Jinv(i,j) << "\t";
+		}
+		cout << endl;
+	}
+
+	cout << "Rotation Matrix: \t" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		for(int j=0; j<3;j++)
+		{
+			cout << cart_pos.M.data[i*3+j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "Translation Vector: \t" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << cart_pos.p.data[i] << "\t";
+	}
+	cout << endl;
+
 	return 0;	
 }

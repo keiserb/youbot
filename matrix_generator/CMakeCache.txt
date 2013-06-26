@@ -155,14 +155,23 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a file.
+EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
+
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
+
+//The directory containing a CMake configuration file for Eigen.
+Eigen_DIR:PATH=/opt/ros/fuerte/share/catkin/cmake/Modules
 
 //gtest-config executable
 GTEST_EXE:FILEPATH=GTEST_EXE-NOTFOUND
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a file.
 PROJECTCONFIG:FILEPATH=PROJECTCONFIG-NOTFOUND
@@ -183,7 +192,7 @@ ROSPACK_EXE:FILEPATH=/opt/ros/fuerte/bin/rospack
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/keiserb/myproject/matrix_generator/src/m_gen.cpp
+_file_name:FILEPATH=/home/keiserb/myproject/matrix_generator/src/m_gen_sym.cpp
 
 //Value Computed by CMake
 matrix_generator_BINARY_DIR:STATIC=/home/keiserb/myproject/matrix_generator
@@ -315,23 +324,64 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: EIGEN_INCLUDE_DIR
+EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//Details about finding Eigen
+FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.3()]
+PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_CFLAGS_I:INTERNAL=
+PC_EIGEN_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_FOUND:INTERNAL=1
+PC_EIGEN_INCLUDEDIR:INTERNAL=
+PC_EIGEN_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_LDFLAGS:INTERNAL=
+PC_EIGEN_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_LIBDIR:INTERNAL=
+PC_EIGEN_LIBRARIES:INTERNAL=
+PC_EIGEN_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_LIBS:INTERNAL=
+PC_EIGEN_LIBS_L:INTERNAL=
+PC_EIGEN_LIBS_OTHER:INTERNAL=
+PC_EIGEN_LIBS_PATHS:INTERNAL=
+PC_EIGEN_PREFIX:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_STATIC_CFLAGS_I:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_STATIC_LDFLAGS:INTERNAL=
+PC_EIGEN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBDIR:INTERNAL=
+PC_EIGEN_STATIC_LIBRARIES:INTERNAL=
+PC_EIGEN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_STATIC_LIBS:INTERNAL=
+PC_EIGEN_STATIC_LIBS_L:INTERNAL=
+PC_EIGEN_STATIC_LIBS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBS_PATHS:INTERNAL=
+PC_EIGEN_VERSION:INTERNAL=3.0.5
+PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
+PC_EIGEN_eigen3_LIBDIR:INTERNAL=
+PC_EIGEN_eigen3_PREFIX:INTERNAL=
+PC_EIGEN_eigen3_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+__pkg_config_checked_PC_EIGEN:INTERNAL=1
 _rosbuild_EXPORTS:INTERNAL=
-_rosbuild_cached_flag_time:INTERNAL=1369727198.22
+_rosbuild_cached_flag_time:INTERNAL=1369818879.69
 _roslang_LANGS:INTERNAL=roscpp;rospy;roslisp
-_rospack_deps_manifests_invoke_result:INTERNAL=
+_rospack_deps_manifests_invoke_result:INTERNAL=/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 _rospack_msgsrv_gen_invoke_result:INTERNAL=
 matrix_generator_CFLAGS_OTHER:INTERNAL=
 matrix_generator_INCLUDEDIR:INTERNAL=
-matrix_generator_INCLUDE_DIRS:INTERNAL=
-matrix_generator_LDFLAGS_OTHER:INTERNAL=
-matrix_generator_LIBRARIES:INTERNAL=
-matrix_generator_LIBRARY_DIRS:INTERNAL=
-matrix_generator_cached_manifest_list:INTERNAL=/home/keiserb/myproject/matrix_generator/manifest.xml
-matrix_generator_temp:INTERNAL=
+matrix_generator_INCLUDE_DIRS:INTERNAL=/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include;/usr/include/eigen3
+matrix_generator_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/lib
+matrix_generator_LIBRARIES:INTERNAL=orocos-kdl
+matrix_generator_LIBRARY_DIRS:INTERNAL=/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/lib
+matrix_generator_cached_manifest_list:INTERNAL=/home/keiserb/myproject/matrix_generator/manifest.xml;/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
+matrix_generator_temp:INTERNAL=-Wl,-rpath,/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/lib
 roscpp_CMAKE:INTERNAL=/opt/ros/fuerte/share/roscpp/rosbuild/roscpp.cmake
 roslib_path:INTERNAL=/opt/ros/fuerte/share/roslib
 roslisp_CMAKE:INTERNAL=/opt/ros/fuerte/share/roslisp/rosbuild/roslisp.cmake

@@ -49,6 +49,7 @@ include CMakeFiles/matrix_generator.dir/flags.make
 CMakeFiles/matrix_generator.dir/src/m_gen.o: CMakeFiles/matrix_generator.dir/flags.make
 CMakeFiles/matrix_generator.dir/src/m_gen.o: src/m_gen.cpp
 CMakeFiles/matrix_generator.dir/src/m_gen.o: manifest.xml
+CMakeFiles/matrix_generator.dir/src/m_gen.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/keiserb/myproject/matrix_generator/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/matrix_generator.dir/src/m_gen.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/matrix_generator.dir/src/m_gen.o -c /home/keiserb/myproject/matrix_generator/src/m_gen.cpp

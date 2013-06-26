@@ -4,6 +4,7 @@
 /home/keiserb/myproject/matrix_generator/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/keiserb/myproject/matrix_generator/CMakeFiles/clean-test-results.dir
 /home/keiserb/myproject/matrix_generator/CMakeFiles/matrix_generator.dir
+/home/keiserb/myproject/matrix_generator/CMakeFiles/matrix_generator_sym.dir
 /home/keiserb/myproject/matrix_generator/CMakeFiles/rosbuild_precompile.dir
 /home/keiserb/myproject/matrix_generator/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/keiserb/myproject/matrix_generator/CMakeFiles/rospack_genmsg.dir

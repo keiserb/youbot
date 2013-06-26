@@ -1,0 +1,14 @@
+<package>
+  <description brief="timingtest">
+
+     timingtest
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/timingtest</url>
+    <depend package="roscpp" />
+</package>
+
+

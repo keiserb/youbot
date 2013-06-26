@@ -11,6 +11,10 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "include"
+  "/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include"
+  "/usr/include/eigen3"
+  "/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/src"
+  "/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})
 SET(CMAKE_Fortran_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

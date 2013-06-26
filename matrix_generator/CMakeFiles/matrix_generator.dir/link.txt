@@ -1,1 +1,1 @@
-/usr/bin/c++   -O2 -g     -pthread CMakeFiles/matrix_generator.dir/src/m_gen.o  -o bin/matrix_generator -rdynamic -lrt 
+/usr/bin/c++   -O2 -g    -Wl,-rpath,/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/lib -pthread CMakeFiles/matrix_generator.dir/src/m_gen.o  -o bin/matrix_generator -rdynamic -L/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/lib -lorocos-kdl -lrt -Wl,-rpath,/opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/lib 

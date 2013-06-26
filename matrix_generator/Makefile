@@ -174,6 +174,19 @@ matrix_generator/fast:
 .PHONY : matrix_generator/fast
 
 #=============================================================================
+# Target rules for targets named matrix_generator_sym
+
+# Build rule for target.
+matrix_generator_sym: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 matrix_generator_sym
+.PHONY : matrix_generator_sym
+
+# fast build rule for target.
+matrix_generator_sym/fast:
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/build
+.PHONY : matrix_generator_sym/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_precompile
 
 # Build rule for target.
@@ -318,6 +331,21 @@ src/m_gen.s:
 	$(MAKE) -f CMakeFiles/matrix_generator.dir/build.make CMakeFiles/matrix_generator.dir/src/m_gen.s
 .PHONY : src/m_gen.s
 
+# target to build an object file
+src/m_gen_sym.o:
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o
+.PHONY : src/m_gen_sym.o
+
+# target to preprocess a source file
+src/m_gen_sym.i:
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.i
+.PHONY : src/m_gen_sym.i
+
+# target to generate assembly for a file
+src/m_gen_sym.s:
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.s
+.PHONY : src/m_gen_sym.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -331,6 +359,7 @@ help:
 	@echo "... clean-test-results"
 	@echo "... edit_cache"
 	@echo "... matrix_generator"
+	@echo "... matrix_generator_sym"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -345,6 +374,9 @@ help:
 	@echo "... src/m_gen.o"
 	@echo "... src/m_gen.i"
 	@echo "... src/m_gen.s"
+	@echo "... src/m_gen_sym.o"
+	@echo "... src/m_gen_sym.i"
+	@echo "... src/m_gen_sym.s"
 .PHONY : help
 
 

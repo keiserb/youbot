@@ -8,7 +8,7 @@
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/matrix_generator</url>
-
+  <depend package="orocos_kdl" />
 </package>
 
 

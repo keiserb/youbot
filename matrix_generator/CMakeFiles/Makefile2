@@ -240,6 +240,41 @@ clean: CMakeFiles/matrix_generator.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/matrix_generator_sym.dir
+
+# All Build rule for target.
+CMakeFiles/matrix_generator_sym.dir/all: CMakeFiles/rosbuild_precompile.dir/all
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/depend
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/keiserb/myproject/matrix_generator/CMakeFiles  2
+	@echo "Built target matrix_generator_sym"
+.PHONY : CMakeFiles/matrix_generator_sym.dir/all
+
+# Include target in all.
+all: CMakeFiles/matrix_generator_sym.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/matrix_generator_sym.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keiserb/myproject/matrix_generator/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/matrix_generator_sym.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keiserb/myproject/matrix_generator/CMakeFiles 0
+.PHONY : CMakeFiles/matrix_generator_sym.dir/rule
+
+# Convenience name for target.
+matrix_generator_sym: CMakeFiles/matrix_generator_sym.dir/rule
+.PHONY : matrix_generator_sym
+
+# clean rule for target.
+CMakeFiles/matrix_generator_sym.dir/clean:
+	$(MAKE) -f CMakeFiles/matrix_generator_sym.dir/build.make CMakeFiles/matrix_generator_sym.dir/clean
+.PHONY : CMakeFiles/matrix_generator_sym.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/matrix_generator_sym.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/rosbuild_precompile.dir
 
 # All Build rule for target.
