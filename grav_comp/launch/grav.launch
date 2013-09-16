@@ -1,0 +1,11 @@
+<launch>
+
+<node pkg="grav_comp" type="grav_comp" name="grav_comp" output="screen" required="true" />
+    
+<!--send youbot urdf to param server -->
+	<param name="robot_description" command="$(find xacro)/xacro.py '$(find youbot_description)/robots/youbot.urdf.xacro'"/>
+
+<!--Decide if base is included or not -->
+	<param name="base" type="bool" value="false"/>
+		
+</launch>

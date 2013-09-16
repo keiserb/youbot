@@ -1,0 +1,19 @@
+<package>
+  <description brief="my_pcl_tutorial">
+
+     my_pcl_tutorial
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/my_pcl_tutorial</url>
+  <depend package="pcl17"/>
+  <depend package="pcl17_ros"/>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+	<depend package="std_msgs"/>
+	<depend package="tf"/>
+</package>
+
+

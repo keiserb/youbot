@@ -1,0 +1,4 @@
+Model total points: 202; Selected Keypoints: 202
+Scene total points: 54689; Selected Keypoints: 10827
+Correspondences found: 751
+Model instances found: 0

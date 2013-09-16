@@ -13,6 +13,8 @@
   <depend package="orocos_kdl" />
   <depend package="youbot_description" />
   <depend package="roscpp" />
+  <depend package="brics_actuator" />
+  <depend package="sensor_msgs" />
   <rosdep name="boost" />
 </package>
 

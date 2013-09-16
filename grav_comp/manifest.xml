@@ -1,0 +1,22 @@
+<package>
+  <description brief="grav_comp">
+
+     grav_comp
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/grav_comp</url>
+  <depend package="kdl_parser" />
+  <depend package="tf_conversions" />
+  <depend package="orocos_kdl" />
+  <depend package="youbot_description" />
+  <depend package="brics_actuator" />
+  <depend package="sensor_msgs" />
+  <depend package="roscpp"/>
+  <rosdep name="boost" />
+<!--  <depend package="rpg_youbot_common" /> -->
+</package>
+
+

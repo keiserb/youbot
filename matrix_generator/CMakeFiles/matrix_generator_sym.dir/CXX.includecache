@@ -11,8 +11,8 @@ iostream
 -
 YoubotArmDynamicsSymbolic.hpp
 /home/keiserb/myproject/matrix_generator/src/YoubotArmDynamicsSymbolic.hpp
-YoubotArmModel.hpp
-/home/keiserb/myproject/matrix_generator/src/YoubotArmModel.hpp
+YoubotArmFKin.hpp
+/home/keiserb/myproject/matrix_generator/src/YoubotArmFKin.hpp
 YoubotJacobi.hpp
 /home/keiserb/myproject/matrix_generator/src/YoubotJacobi.hpp
 kdl/jntarray.hpp
@@ -35,8 +35,14 @@ Eigen/Dense
 -
 ValuesUrdf.hpp
 /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/ValuesUrdf.hpp
+YoubotJoints.hpp
+/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotJoints.hpp
+fstream
+-
+iostream
+-
 
-/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotArmModel.hpp
+/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotArmFKin.hpp
 math.h
 -
 kdl/jntarray.hpp
@@ -45,8 +51,6 @@ kdl/frames.hpp
 -
 Eigen/Dense
 -
-ValuesUrdf.hpp
-/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/ValuesUrdf.hpp
 
 /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotJacobi.hpp
 math.h
@@ -57,8 +61,8 @@ kdl/frames.hpp
 -
 Eigen/Dense
 -
-iostream
--
+
+/home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotJoints.hpp
 
 /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include/kdl/frames.hpp
 utilities/kdl-config.h

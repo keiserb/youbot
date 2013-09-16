@@ -1,0 +1,24 @@
+<package>
+  <description brief="writeformatlab">
+
+     writeformatlab
+
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/writeformatlab</url>
+  <depend package="sensor_msgs" />
+  <depend package="roscpp" />
+  <depend package="rpg_youbot_common" />
+  <depend package="brics_actuator" />
+  <depend package="ik_solver_service"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf_conversions"/>
+  <depend package="trajectory_generator"/>
+  <depend package="trajectory_msgs"/>
+  <depend package="torque_control"/>
+  <depend package="actionlib"/>
+</package>
+
+

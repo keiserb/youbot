@@ -1,0 +1,23 @@
+import("communicator")
+import("rtt_std_msgs")
+
+# Load a Communicator component
+loadComponent("Communicator","Communicator")
+
+# Give it a periodic activity
+setActivity("Communicator",1.0,HighestPriority,ORO_SCHED_RT)
+
+# Create connections
+stream("Communicator.joint_states", ros.topic("joint_states"))
+stream("Communicator.twist_in", ros.topic("twist_in"))
+stream("Communicator.jpos_in", ros.topic("jpos_in"))
+stream("Communicator.cmd_vel", ros.topic("cmd_vel"))
+stream("Communicator.jstate_out", ros.topic("jstate_out"))
+stream("Communicator.position_command", ros.topic("arm_1/arm_controller/position_command"))
+
+# Configure the Communicator component
+Communicator.configure()
+
+# Start it
+Communicator.start()
+

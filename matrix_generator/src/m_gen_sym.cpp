@@ -1,6 +1,6 @@
 #include <iostream>
 #include "YoubotArmDynamicsSymbolic.hpp"
-#include "YoubotArmModel.hpp"
+#include "YoubotArmFKin.hpp"
 #include "YoubotJacobi.hpp"
 #include <kdl/jntarray.hpp>
 #include <kdl/frames.hpp>
@@ -30,9 +30,12 @@ int main()
 	MatrixXd M(5,5);
 	MatrixXd C(5,5);
 	MatrixXd J(6,5);
+	MatrixXd Kp(5,5);
+	MatrixXd Kv(5,5);
 	MatrixXd Jinv(5,6);
 	VectorXd N(5);
 	VectorXd T(5);
+	MatrixXd x1(4,4),x2(4,4),x3(4,4),x4(4,4),x5(4,4),tf(4,4);
 	for(int i=0;i<5;i++)
 	{
 		for(int j=0;j<5;j++)
@@ -46,11 +49,11 @@ int main()
 
 	pos.resize(5);
 	vel.resize(5);
-	pos(0) = 0.6824;
-	pos(1) = 0.5165;
-	pos(2) = 1.0145;
-	pos(3) = 0.4337;
-	pos(4) = 0.1530;
+	pos(0) = -0.0721;
+	pos(1) = -0.171153;
+	pos(2) = -0.2174;
+	pos(3) = 0.0046;
+	pos(4) = -0.2933;
 	vel(0) = -2;
 	vel(1) = 1.22;
 	vel(2) = 0;
@@ -60,27 +63,54 @@ int main()
 	getM(M,pos);
 	getC(C,pos,vel);
 	getN(N,pos);
-/*	for(int i = 0; i<5; i++)
-	{
-		temp=0;
-		for(int j = 0; j<5; j++)
-		{
-			temp+=M[i][j]*tdd[j]+C[i][j]*td[j];
-		}
-		T[i]=temp+N[i][0];
-	}
-	
-	getTwists(xi_1,xi_2,xi_3,xi_4,xi_5,tf,pos);
-	forwardKin(xi_1,xi_2,xi_3,xi_4,xi_5,tf, cart_pos);
-	*/
 	//clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
+	getTwists(x1,x2,x3,x4,x5,tf,pos);
 	getCartPos(pos,cart_pos);
 	getJacobi(J,pos);
 	getInverseJacobi(Jinv,pos);
+	gainMatrices(Kp, Kv);
+	cout << Kp << endl;
+	cout << Kv << endl;
 
 	cout << "execution time in milliseconds: " << 	diff(t0,t1).tv_nsec/1000000.0 << endl;
+
 	cout << "Pos: " << endl;
 	cout << pos(0) << "\t" << pos(1) << "\t" << pos(2) << "\t" << pos(3) << "\t" << pos(4) << endl;
+
+	cout << "Rotation Matrix: \t" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		for(int j=0; j<3;j++)
+		{
+			cout << cart_pos.M.data[i*3+j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "Translation Vector: \t" << endl;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << cart_pos.p.data[i] << "\t";
+	}
+	cout << endl;
+
+	cout << "x1_e" << endl;
+	cout << x1 << endl;
+
+	cout << "x2_e" << endl;
+	cout << x2 << endl;
+
+	cout << "x3_e" << endl;
+	cout << x3 << endl;
+
+	cout << "x4_e" << endl;
+	cout << x4 << endl;
+
+	cout << "x5_e" << endl;
+	cout << x5 << endl;
+
+	cout << "tf" << endl;
+	cout << tf << endl;
+
 
 	cout << "M: " << endl;
 	for(int i=0;i<5;i++)
@@ -129,21 +159,7 @@ int main()
 		cout << endl;
 	}
 
-	cout << "Rotation Matrix: \t" << endl;
-	for (int i = 0; i < 3; i++)
-	{
-		for(int j=0; j<3;j++)
-		{
-			cout << cart_pos.M.data[i*3+j] << "\t";
-		}
-		cout << endl;
-	}
-	cout << "Translation Vector: \t" << endl;
-	for (int i = 0; i < 3; i++)
-	{
-		cout << cart_pos.p.data[i] << "\t";
-	}
-	cout << endl;
+
 
 	return 0;	
 }

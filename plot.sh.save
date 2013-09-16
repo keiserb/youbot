@@ -1,0 +1,2 @@
+rosrun rxtools rxplot /joint_states/effort[0] /arm_1/arm_controller/torques_command/torques[0]/value
+

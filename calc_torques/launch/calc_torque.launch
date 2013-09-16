@@ -3,6 +3,6 @@
 <node pkg="calc_torques" type="calc_torques" name="calc_torques" output="screen" required="true" />
     
 <!--send youbot urdf to param server -->
-	<param name="robot_description" command="$(find xacro)/xacro.py '$(find youbot_description)/robots/youbot.urdf.xacro'"/>
+	<param name="robot_description" type="string" value="/home/keiserb/myproject/calc_torques/youbot.urdf"/>
 
 </launch>

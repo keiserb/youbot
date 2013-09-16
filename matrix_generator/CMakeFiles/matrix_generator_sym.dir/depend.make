@@ -4,8 +4,9 @@
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: src/m_gen_sym.cpp
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/ValuesUrdf.hpp
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotArmDynamicsSymbolic.hpp
-CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotArmModel.hpp
+CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotArmFKin.hpp
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotJacobi.hpp
+CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /home/keiserb/rosstacks/rpg_youbot/ros_packages/trajectory_generator/../YoubotArmModel/YoubotJoints.hpp
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include/kdl/frames.hpp
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include/kdl/frames.inl
 CMakeFiles/matrix_generator_sym.dir/src/m_gen_sym.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/install_dir/include/kdl/jacobian.hpp
