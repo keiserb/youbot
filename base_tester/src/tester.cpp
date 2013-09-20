@@ -3,15 +3,16 @@
 using namespace std;
 
 base_tester::base_tester(ros::NodeHandle& nh) :
-    arrived(false)
+    opti_arrived(false), odom_arrived(false)
 {
   base_pub = nh.advertise<geometry_msgs::Twist>("cmd_vel", 1);
   opti_sub = nh.subscribe("/optitrack", 1, &base_tester::optiCallback, this);
+  odom_sub = nh.subscribe("/odom",1,&base_tester::odomCallback,this);
 }
 
 void base_tester::optiCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
 {
-  arrived = true;
+  opti_arrived = true;
   double roll, pitch, yaw;
   geometry_msgs::PoseStamped pos = *msg;
   btQuaternion rot(pos.pose.orientation.x, pos.pose.orientation.y, pos.pose.orientation.z, pos.pose.orientation.w);
@@ -24,9 +25,28 @@ void base_tester::optiCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
   opti_pos.angular.z = yaw;
 }
 
+void base_tester::odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
+{
+  odom_arrived = true;
+  double roll, pitch, yaw;
+  nav_msgs::Odometry odom_msg = *msg;
+  if(odom_msg.child_frame_id == "base_footprint")
+  {
+    btQuaternion rot(odom_msg.pose.pose.orientation.x, odom_msg.pose.pose.orientation.y, odom_msg.pose.pose.orientation.z, odom_msg.pose.pose.orientation.w);
+    tf::Matrix3x3(rot).getRPY(roll, pitch, yaw);
+    odom_pos.linear.x = odom_msg.pose.pose.position.x;
+    odom_pos.linear.y = odom_msg.pose.pose.position.y;
+    odom_pos.linear.z = odom_msg.pose.pose.position.z;
+    odom_pos.angular.x = roll;
+    odom_pos.angular.y = pitch;
+    odom_pos.angular.z = yaw;
+  }
+
+}
+
 void base_tester::getTF(geometry_msgs::Twist & base_pos_odom, geometry_msgs::Twist & base_pos_opti)
 {
-  double roll, pitch, yaw;
+ /* double roll, pitch, yaw;
   tf::StampedTransform od_bf;
   try
   {
@@ -45,7 +65,13 @@ void base_tester::getTF(geometry_msgs::Twist & base_pos_odom, geometry_msgs::Twi
   base_pos_odom.linear.z = trans.z();
   base_pos_odom.angular.x = roll;
   base_pos_odom.angular.y = pitch;
-  base_pos_odom.angular.z = yaw;
+  base_pos_odom.angular.z = yaw;*/
+  base_pos_odom.linear.x = odom_pos.linear.x - init_odom_pos.linear.x;
+  base_pos_odom.linear.y = odom_pos.linear.y - init_odom_pos.linear.y;
+  base_pos_odom.linear.z = odom_pos.linear.z - init_odom_pos.linear.z;
+  base_pos_odom.angular.x = odom_pos.angular.x - init_odom_pos.angular.x;
+  base_pos_odom.angular.y = odom_pos.angular.y - init_odom_pos.angular.y;
+  base_pos_odom.angular.z = odom_pos.angular.z - init_odom_pos.angular.z;
 
   base_pos_opti.linear.x = opti_pos.linear.x - init_opti_pos.linear.x;
   base_pos_opti.linear.y = opti_pos.linear.y - init_opti_pos.linear.y;
@@ -60,11 +86,12 @@ void base_tester::move_base()
   int x;
   ros::spinOnce();
   ros::Rate loop_rate(50);
-  while (!arrived)
+  while (!opti_arrived && !odom_arrived)
   {
     ros::spinOnce();
     loop_rate.sleep();
   }
+  init_odom_pos = odom_pos;
   init_opti_pos = opti_pos;
   geometry_msgs::Twist odom_position, opti_position;
   geometry_msgs::Twist mov;

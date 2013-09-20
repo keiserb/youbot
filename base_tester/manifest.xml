@@ -9,6 +9,7 @@
   <url>http://ros.org/wiki/long_traj</url>
   <depend package="roscpp"/>
   <depend package="brics_actuator"/>
+  <depend package="nav_msgs"/>
   <depend package="geometry_msgs"/>
   <depend package="rpg_youbot_common"/>
   <depend package="tf"/>
