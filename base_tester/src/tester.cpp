@@ -125,7 +125,9 @@ void base_tester::move_base()
   }
   mov.linear.x = 0.0;
   base_pub.publish(mov);
-
+  sleep(2);
+  ros::spinOnce();
+  getTF(odom_position, opti_position);
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
@@ -143,6 +145,9 @@ void base_tester::move_base()
   }
   mov.linear.x = 0.0;
   base_pub.publish(mov);
+  sleep(2);
+    ros::spinOnce();
+    getTF(odom_position, opti_position);
   mov.linear.y = 0.1;
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
@@ -160,6 +165,9 @@ void base_tester::move_base()
   }
   mov.linear.y = 0.0;
   base_pub.publish(mov);
+  sleep(2);
+    ros::spinOnce();
+    getTF(odom_position, opti_position);
   mov.linear.y = -0.1;
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
@@ -177,6 +185,9 @@ void base_tester::move_base()
   }
   mov.linear.y = 0.0;
   base_pub.publish(mov);
+  sleep(2);
+    ros::spinOnce();
+    getTF(odom_position, opti_position);
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
@@ -194,6 +205,9 @@ void base_tester::move_base()
   }
   mov.angular.z = 0.0;
   base_pub.publish(mov);
+  sleep(2);
+    ros::spinOnce();
+    getTF(odom_position, opti_position);
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
@@ -211,6 +225,9 @@ void base_tester::move_base()
   }
   mov.angular.z = 0;
   base_pub.publish(mov);
+  sleep(2);
+    ros::spinOnce();
+    getTF(odom_position, opti_position);
   ROS_INFO("End Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("End Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
