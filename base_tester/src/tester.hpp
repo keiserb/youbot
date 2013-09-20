@@ -24,6 +24,7 @@ public:
   ros::Subscriber opti_sub;
   tf::TransformListener lr;
 private:
+  bool arrived;
   geometry_msgs::Twist opti_pos;
   geometry_msgs::Twist init_opti_pos;
   void optiCallback(const geometry_msgs::PoseStamped::ConstPtr& msg);
