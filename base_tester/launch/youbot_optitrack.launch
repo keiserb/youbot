@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find vrpn_tracker)/launch/optitrackToVicon.launch">
+        <arg name="serverIP" value="192.168.200.5" />   
+        <arg name="objectName" value="youbot" />
+        <arg name="topic" value="optitrack" />  
+    </include>
+</launch>
+
