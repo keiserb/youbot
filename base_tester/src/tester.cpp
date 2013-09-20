@@ -56,6 +56,7 @@ void base_tester::getTF(geometry_msgs::Twist & base_pos_odom, geometry_msgs::Twi
 void base_tester::move_base()
 {
   int x;
+  ros::spinOnce();
   init_opti_pos=opti_pos;
   ros::Rate loop_rate(50);
   geometry_msgs::Twist odom_position, opti_position;
@@ -66,11 +67,14 @@ void base_tester::move_base()
   mov.angular.x = 0.0;
   mov.angular.y = 0.0;
   mov.angular.z = 0.0;
-  ROS_INFO("Moving base 1m in x direction, ready?");
-  cin >> x;
+  ros::spinOnce();
   loop_rate.sleep();
   ros::spinOnce();
   getTF(odom_position, opti_position);
+  ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y, odom_position.angular.z);
+  ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y, opti_position.angular.z);
+  ROS_INFO("Moving base 1m in x direction, ready?");
+  cin >> x;
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y, odom_position.angular.z);
   ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y, opti_position.angular.z);
   while(odom_position.linear.x < 1 )
