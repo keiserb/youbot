@@ -19,6 +19,7 @@
 class base_tester
 {
 public:
+  bool opti_arrived, odom_arrived;
   base_tester(ros::NodeHandle& nh);
   void move_base();
   ros::Publisher base_pub;
@@ -26,7 +27,6 @@ public:
   ros::Subscriber odom_sub;
   tf::TransformListener lr;
 private:
-  bool opti_arrived, odom_arrived;
   geometry_msgs::Twist opti_pos;
   geometry_msgs::Twist odom_pos;
   geometry_msgs::Twist init_odom_pos;

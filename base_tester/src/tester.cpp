@@ -7,7 +7,7 @@ base_tester::base_tester(ros::NodeHandle& nh) :
 {
   base_pub = nh.advertise<geometry_msgs::Twist>("cmd_vel", 1);
   opti_sub = nh.subscribe("/optitrack", 1, &base_tester::optiCallback, this);
-  odom_sub = nh.subscribe("/odom",1,&base_tester::odomCallback,this);
+  odom_sub = nh.subscribe("/odom", 1, &base_tester::odomCallback, this);
 }
 
 void base_tester::optiCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
@@ -30,9 +30,10 @@ void base_tester::odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
   odom_arrived = true;
   double roll, pitch, yaw;
   nav_msgs::Odometry odom_msg = *msg;
-  if(odom_msg.child_frame_id == "base_footprint")
+  if (odom_msg.child_frame_id == "base_footprint")
   {
-    btQuaternion rot(odom_msg.pose.pose.orientation.x, odom_msg.pose.pose.orientation.y, odom_msg.pose.pose.orientation.z, odom_msg.pose.pose.orientation.w);
+    btQuaternion rot(odom_msg.pose.pose.orientation.x, odom_msg.pose.pose.orientation.y,
+                     odom_msg.pose.pose.orientation.z, odom_msg.pose.pose.orientation.w);
     tf::Matrix3x3(rot).getRPY(roll, pitch, yaw);
     odom_pos.linear.x = odom_msg.pose.pose.position.x;
     odom_pos.linear.y = odom_msg.pose.pose.position.y;
@@ -46,26 +47,26 @@ void base_tester::odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
 
 void base_tester::getTF(geometry_msgs::Twist & base_pos_odom, geometry_msgs::Twist & base_pos_opti)
 {
- /* double roll, pitch, yaw;
-  tf::StampedTransform od_bf;
-  try
-  {
-    lr.lookupTransform("odom", "base_footprint", ros::Time(0), od_bf);
-  }
-  catch (tf::TransformException ex)
-  {
-    ROS_ERROR("%s", ex.what());
-  }
-  tf::Vector3 trans = od_bf.getOrigin();
-  tf::Quaternion rot = od_bf.getRotation();
-  tf::Matrix3x3(rot).getRPY(roll, pitch, yaw);
+  /* double roll, pitch, yaw;
+   tf::StampedTransform od_bf;
+   try
+   {
+   lr.lookupTransform("odom", "base_footprint", ros::Time(0), od_bf);
+   }
+   catch (tf::TransformException ex)
+   {
+   ROS_ERROR("%s", ex.what());
+   }
+   tf::Vector3 trans = od_bf.getOrigin();
+   tf::Quaternion rot = od_bf.getRotation();
+   tf::Matrix3x3(rot).getRPY(roll, pitch, yaw);
 
-  base_pos_odom.linear.x = trans.x();
-  base_pos_odom.linear.y = trans.y();
-  base_pos_odom.linear.z = trans.z();
-  base_pos_odom.angular.x = roll;
-  base_pos_odom.angular.y = pitch;
-  base_pos_odom.angular.z = yaw;*/
+   base_pos_odom.linear.x = trans.x();
+   base_pos_odom.linear.y = trans.y();
+   base_pos_odom.linear.z = trans.z();
+   base_pos_odom.angular.x = roll;
+   base_pos_odom.angular.y = pitch;
+   base_pos_odom.angular.z = yaw;*/
   base_pos_odom.linear.x = odom_pos.linear.x - init_odom_pos.linear.x;
   base_pos_odom.linear.y = odom_pos.linear.y - init_odom_pos.linear.y;
   base_pos_odom.linear.z = odom_pos.linear.z - init_odom_pos.linear.z;
@@ -123,9 +124,16 @@ void base_tester::move_base()
     ros::spinOnce();
     getTF(odom_position, opti_position);
   }
+  opti_arrived = false;
+  odom_arrived = false;
   mov.linear.x = 0.0;
   base_pub.publish(mov);
   sleep(2);
+  while (!opti_arrived && !odom_arrived)
+  {
+    ros::spinOnce();
+    loop_rate.sleep();
+  }
   ros::spinOnce();
   getTF(odom_position, opti_position);
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
@@ -144,10 +152,16 @@ void base_tester::move_base()
     getTF(odom_position, opti_position);
   }
   mov.linear.x = 0.0;
+  opti_arrived = false;
+  odom_arrived = false;
   base_pub.publish(mov);
   sleep(2);
+  while (!opti_arrived && !odom_arrived)
+  {
     ros::spinOnce();
-    getTF(odom_position, opti_position);
+    loop_rate.sleep();
+  }
+  getTF(odom_position, opti_position);
   mov.linear.y = 0.1;
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
@@ -164,10 +178,17 @@ void base_tester::move_base()
     getTF(odom_position, opti_position);
   }
   mov.linear.y = 0.0;
+  opti_arrived = false;
+  odom_arrived = false;
   base_pub.publish(mov);
   sleep(2);
+  while (!opti_arrived && !odom_arrived)
+  {
     ros::spinOnce();
-    getTF(odom_position, opti_position);
+    loop_rate.sleep();
+  }
+  ros::spinOnce();
+  getTF(odom_position, opti_position);
   mov.linear.y = -0.1;
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
@@ -184,10 +205,17 @@ void base_tester::move_base()
     getTF(odom_position, opti_position);
   }
   mov.linear.y = 0.0;
+  opti_arrived = false;
+  odom_arrived = false;
   base_pub.publish(mov);
   sleep(2);
+  while (!opti_arrived && !odom_arrived)
+  {
     ros::spinOnce();
-    getTF(odom_position, opti_position);
+    loop_rate.sleep();
+  }
+  ros::spinOnce();
+  getTF(odom_position, opti_position);
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
@@ -204,10 +232,17 @@ void base_tester::move_base()
     getTF(odom_position, opti_position);
   }
   mov.angular.z = 0.0;
+  opti_arrived = false;
+  odom_arrived = false;
   base_pub.publish(mov);
   sleep(2);
+  while (!opti_arrived && !odom_arrived)
+  {
     ros::spinOnce();
-    getTF(odom_position, opti_position);
+    loop_rate.sleep();
+  }
+  ros::spinOnce();
+  getTF(odom_position, opti_position);
   ROS_INFO("Current Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("Current Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
@@ -224,10 +259,17 @@ void base_tester::move_base()
     getTF(odom_position, opti_position);
   }
   mov.angular.z = 0;
+  opti_arrived = false;
+  odom_arrived = false;
   base_pub.publish(mov);
   sleep(2);
+  while (!opti_arrived && !odom_arrived)
+  {
     ros::spinOnce();
-    getTF(odom_position, opti_position);
+    loop_rate.sleep();
+  }
+  ros::spinOnce();
+  getTF(odom_position, opti_position);
   ROS_INFO("End Position Odom: x: %f \t y: %f \t yaw: %f", odom_position.linear.x, odom_position.linear.y,
            odom_position.angular.z);
   ROS_INFO("End Position Opti: x: %f \t y: %f \t yaw: %f", opti_position.linear.x, opti_position.linear.y,
