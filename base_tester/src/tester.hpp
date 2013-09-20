@@ -26,7 +26,7 @@ public:
 private:
   geometry_msgs::Twist opti_pos;
   geometry_msgs::Twist init_opti_pos;
-  void optiCallback(geometry_msgs::PoseStamped::ConstPtr& msg);
+  void optiCallback(const geometry_msgs::PoseStamped::ConstPtr& msg);
   void getTF(geometry_msgs::Twist & base_pos_odom, geometry_msgs::Twist & base_pos_opti);
 };
 

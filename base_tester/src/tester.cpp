@@ -8,7 +8,7 @@ base_tester::base_tester(ros::NodeHandle& nh)
   opti_sub = nh.subscribe("/optitrack", 1, &base_tester::optiCallback, this);
 }
 
-void base_tester::optiCallback(geometry_msgs::PoseStamped::ConstPtr& msg)
+void base_tester::optiCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
 {
   double roll, pitch, yaw;
   geometry_msgs::PoseStamped pos = *msg;
