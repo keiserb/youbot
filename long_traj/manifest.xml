@@ -1,0 +1,21 @@
+<package>
+  <description brief="long_traj">
+
+     long_traj
+  </description>
+  <author>keiserb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/long_traj</url>
+  <depend package="tf_conversions" />
+  <depend package="youbot_description" />
+  <depend package="roscpp"/>
+  <depend package="ik_solver_service"/>
+  <depend package="brics_actuator"/>
+  <depend package="trajectory_msgs"/>
+  <depend package="rpg_youbot_common"/>
+  <depend package="ik_solver_service"/>
+  <depend package="torque_control"/>
+  <depend package="trajectory_generator"/>
+  <rosdep name="boost" />
+</package>
