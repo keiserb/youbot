@@ -6,7 +6,7 @@ fclose(fid)
 [m,n]=size(read)
 for i=1:n
     act_pos(i,1:5)=read(1:5,i);
-    t(i)=(i-1)*0.02;
+    t(i)=(i-1)*0.002;
 end
 t=t';
 fid = fopen('values/req_pos.txt','r')
@@ -63,7 +63,6 @@ fclose(fid)
 [m,n]=size(read)
 for i=1:n
     old_tor(i,1:5)=read(1:5,i);
-    t(i)=(i-1)*0.02;
 end
 
 fid = fopen('values/new_tor.txt','r')

@@ -26,12 +26,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 rosbuild_find_ros_package(trajectory_generator)
 
 #common commands for building c++ executables and libraries
-#rosbuild_add_library(trajectory_generator ${trajectory_generator_PACKAGE_PATH}/src/traj.cpp ${trajectory_generator_PACKAGE_PATH}/src/traj.hpp)
-#target_link_libraries(trajectory_generator ${trajectory_generator_PACKAGE_PATH}/src/traj.cpp ${trajectory_generator_PACKAGE_PATH}/src/traj.hpp)
+find_package(Eigen REQUIRED)
 rosbuild_add_boost_directories()
-include_directories(${trajectory_generator_PACKAGE_PATH}/../YoubotArmModel)
-#rosbuild_link_boost(${PROJECT_NAME} thread)
-#include_directories(${trajectory_generator_PACKAGE_PATH}/src)
+include_directories(${Eigen_INCLUDE_DIRS} ${trajectory_generator_PACKAGE_PATH}/../YoubotArmModel)
 rosbuild_add_executable(calc_torques src/calc_tor.cpp)
-#${trajectory_generator_PACKAGE_PATH}/src/traj.cpp
-#target_link_libraries(example ${PROJECT_NAME})

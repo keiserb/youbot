@@ -13,6 +13,8 @@
 #include <iostream>
 #include <fstream>
 #include "YoubotJoints.hpp"
+#include "YoubotArmFKin.hpp"
+#include "YoubotArmDynamicsSymbolic.hpp"
 #include "rpg_youbot_common.h"
 #include "ik_solver_service/SolveFullyConstrainedIK.h"
 #include <brics_actuator/JointPositions.h>
@@ -24,6 +26,7 @@
 #include <trajectory_generator/CStoCS.h>
 #include <torque_control/torque_trajectoryAction.h>
 #include <actionlib/client/simple_action_client.h>
+#include <Eigen/Dense>
 
 class wfm
 {
@@ -37,13 +40,18 @@ public:
   void publishArmCommand(geometry_msgs::Pose object);
   ros::ServiceClient cs2cs_client;
   double* getJPos();
-  int counter;
+  double ztar;
+  int counter, loop;
 private:
   void jointStateCallback(const sensor_msgs::JointState::ConstPtr& msg);
   double* solve_ik(geometry_msgs::Pose object);
   bool positionReached(double * jpos);
   double j_pos[YOUBOT_NR_OF_JOINTS], t_pos[YOUBOT_NR_OF_JOINTS];
   double error;
+  double * pos;
+  Eigen::VectorXd jpos_eig;
+  Eigen::Affine3d cart_pos;
+  brics_actuator::JointPositions arm_cmd;
   ros::Subscriber jpos_sub;
   ros::Publisher jpos_pub;
   ros::Publisher jvel_pub;

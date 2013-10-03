@@ -24,5 +24,6 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 rosbuild_find_ros_package(trajectory_generator)
 
 
-include_directories(${trajectory_generator_PACKAGE_PATH}/../YoubotArmModel)
+find_package(Eigen REQUIRED)
+include_directories(${Eigen_INCLUDE_DIRS} ${trajectory_generator_PACKAGE_PATH}/../YoubotArmModel)
 rosbuild_add_executable(wfm src/wfm.cpp ${trajectory_generator_PACKAGE_PATH}/../rpg_youbot_common/src/rpg_youbot_common.cpp)

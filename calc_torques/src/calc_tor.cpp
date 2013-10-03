@@ -19,6 +19,8 @@
 #include <tf_conversions/tf_kdl.h>
 #include <iostream>
 
+#include <Eigen/Dense>
+
 using namespace KDL;
 using namespace std;
 
@@ -38,6 +40,22 @@ bool getOldTorques(KDL::Chain& m_chain, KDL::JntArray m_q, KDL::JntArray m_qdot,
 {
   KDL::Wrenches m_wrenches;
   boost::shared_ptr<KDL::ChainIdSolver_RNE> m_id_solver;
+  Eigen::VectorXd pos(5), vel(5), acc(5), tor(5);
+  for(int i=0; i<5; i++)
+  {
+    pos(i)=m_q(i);
+    vel(i)=m_qdot(i);
+    acc(i)=m_qdotdot(i);
+  }
+  pos=youbot2torque(pos);
+  vel(2)=-vel(2);
+  acc(2)=-acc(2);
+  for(int i=0; i<5; i++)
+  {
+    m_q(i)=pos(i);
+    m_qdot(i)=vel(i);
+    m_qdotdot(i)=acc(i);
+  }
 
   m_wrenches.resize(m_chain.getNrOfSegments());
   SetToZero(m_wrenches[m_wrenches.size() - 1]);
@@ -81,7 +99,21 @@ bool getNewTorques(KDL::Chain& m_chain, KDL::JntArray m_q, KDL::JntArray m_qdot,
 
 void getInternetTorques(KDL::JntArray m_q, KDL::JntArray m_qdot, KDL::JntArray m_qdotdot, KDL::JntArray& m_torques)
 {
-  calcTorques(m_q, m_qdot, m_qdotdot, m_torques);
+  Eigen::VectorXd pos(5), vel(5), acc(5), tor(5);
+  for(int i=0; i<5; i++)
+  {
+    pos(i)=m_q(i);
+    vel(i)=m_qdot(i);
+    acc(i)=m_qdotdot(i);
+  }
+  pos=youbot2torque(pos);
+  vel(2)=-vel(2);
+  acc(2)=-acc(2);
+  calcTorques(pos, vel, acc, tor);
+  for(int i=0; i<5; i++)
+  {
+    m_torques(i)=tor(i);
+  }
 }
 
 brics_actuator::JointTorques generate_joint_torque_msg(KDL::JntArray arr)
